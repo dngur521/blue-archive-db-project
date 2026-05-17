@@ -37,6 +37,26 @@
 - DB: **DuckDB**
 - ERD Tool: **ERD Editor** (Crow's Feet 표기법)
 
+## 스키마 핵심 결정 사항
+- 스킬 컬럼명은 **한국어 인게임 명칭 기준**: `ex_skill`, `normal_skill`, `enhance_skill`, `sub_skill` (EX→기본→강화→서브 순)
+- `cultivation` (현재 육성) / `cultivation_goal` (목표 육성) 분리 → LEFT JOIN으로 3테이블 JOIN 충족
+- `gacha_pull`의 `is_pickup`은 저장하지 않음 (banner JOIN으로 도출 가능)
+- `bond_rank` 범위: 1~100
+
+## 커밋 메시지 규칙
+이모지 + Conventional Commit 형식 사용:
+
+| 이모지 | 타입 | 용도 |
+|---|---|---|
+| ✨ | feat | 새 기능 |
+| 🐛 | fix | 버그 수정 |
+| 📝 | docs | 문서 수정 |
+| 🗃️ | db | DB 스키마/ERD 변경 |
+| ♻️ | refactor | 리팩토링 |
+| 🔧 | chore | 설정/기타 |
+
+예시: `✨ feat: 가챠 시뮬레이터 서비스 레이어 구현`
+
 ## 주의사항
 - AI로 생성한 스키마를 그대로 사용하지 말 것 (반드시 수정)
 - 다른 학생과 동일한 스키마 → 0점
