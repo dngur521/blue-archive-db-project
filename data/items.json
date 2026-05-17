@@ -1,0 +1,8721 @@
+{
+  "items": {
+    "1": {
+      "id": 1,
+      "name": "기동석 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "2": {
+      "id": 2,
+      "name": "부스터 티켓",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3": {
+      "id": 3,
+      "name": "기동석",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "7": {
+      "id": 7,
+      "name": "총력전 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "8": {
+      "id": 8,
+      "name": "전술 대회 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "9": {
+      "id": 9,
+      "name": "상급 총력전 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10": {
+      "id": 10,
+      "name": "초급 활동 보고서",
+      "category": "CharacterExpGrowth",
+      "rarity": "N",
+      "exp_value": 50
+    },
+    "11": {
+      "id": 11,
+      "name": "일반 활동 보고서",
+      "category": "CharacterExpGrowth",
+      "rarity": "R",
+      "exp_value": 500
+    },
+    "12": {
+      "id": 12,
+      "name": "상급 활동 보고서",
+      "category": "CharacterExpGrowth",
+      "rarity": "SR",
+      "exp_value": 2000
+    },
+    "13": {
+      "id": 13,
+      "name": "최상급 활동 보고서",
+      "category": "CharacterExpGrowth",
+      "rarity": "SSR",
+      "exp_value": 10000
+    },
+    "23": {
+      "id": 23,
+      "name": "엘리그마",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "30": {
+      "id": 30,
+      "name": "카페 설비 코어 LV1",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "31": {
+      "id": 31,
+      "name": "카페 설비 코어 LV2",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "32": {
+      "id": 32,
+      "name": "카페 설비 코어 LV3",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "40": {
+      "id": 40,
+      "name": "카페 2호점 설비 코어 LV1",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "41": {
+      "id": 41,
+      "name": "카페 2호점 설비 코어 LV2",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "42": {
+      "id": 42,
+      "name": "카페 2호점 설비 코어 LV3",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "60": {
+      "id": 60,
+      "name": "종합전술시험 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "61": {
+      "id": 61,
+      "name": "현상수배 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "70": {
+      "id": 70,
+      "name": "대결전 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "71": {
+      "id": 71,
+      "name": "상급 대결전 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80": {
+      "id": 80,
+      "name": "하급 합성용 기동석",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "81": {
+      "id": 81,
+      "name": "일반 합성용 기동석",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "82": {
+      "id": 82,
+      "name": "상급 합성용 기동석",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "83": {
+      "id": 83,
+      "name": "최상급 합성용 기동석",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "90": {
+      "id": 90,
+      "name": "하급 제조용 마테리얼",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "91": {
+      "id": 91,
+      "name": "일반 제조용 마테리얼",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "92": {
+      "id": 92,
+      "name": "상급 제조용 마테리얼",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "100": {
+      "id": 100,
+      "name": "네브라 디스크 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "101": {
+      "id": 101,
+      "name": "파손된 네브라 디스크",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "102": {
+      "id": 102,
+      "name": "마모된 네브라 디스크",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "103": {
+      "id": 103,
+      "name": "온전한 네브라 디스크",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "110": {
+      "id": 110,
+      "name": "파에스토스 원반 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "111": {
+      "id": 111,
+      "name": "파손된 파에스토스 원반",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "112": {
+      "id": 112,
+      "name": "마모된 파에스토스 원반",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "113": {
+      "id": 113,
+      "name": "온전한 파에스토스 원반",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "120": {
+      "id": 120,
+      "name": "볼프세크 철광석",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "121": {
+      "id": 121,
+      "name": "볼프세크 철조각",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "122": {
+      "id": 122,
+      "name": "저순도 볼프세크 강철",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "123": {
+      "id": 123,
+      "name": "고순도 볼프세크 강철",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "130": {
+      "id": 130,
+      "name": "님루드 렌즈 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "131": {
+      "id": 131,
+      "name": "파손된 님루드 렌즈",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "132": {
+      "id": 132,
+      "name": "마모된 님루드 렌즈",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "133": {
+      "id": 133,
+      "name": "온전한 님루드 렌즈",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "140": {
+      "id": 140,
+      "name": "만드라고라 씨앗",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "141": {
+      "id": 141,
+      "name": "만드라고라 새싹",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "142": {
+      "id": 142,
+      "name": "만드라고라 주스",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "143": {
+      "id": 143,
+      "name": "만드라고라 농축액",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150": {
+      "id": 150,
+      "name": "로혼치 사본 페이지",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "151": {
+      "id": 151,
+      "name": "훼손된 로혼치 사본",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "152": {
+      "id": 152,
+      "name": "편집된 로혼치 사본",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "153": {
+      "id": 153,
+      "name": "온전한 로혼치 사본",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "160": {
+      "id": 160,
+      "name": "에테르 가루",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "161": {
+      "id": 161,
+      "name": "에테르 조각",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "162": {
+      "id": 162,
+      "name": "에테르 결정",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "163": {
+      "id": 163,
+      "name": "에테르 정수",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "170": {
+      "id": 170,
+      "name": "안티키테라 장치 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "171": {
+      "id": 171,
+      "name": "파손된 안티키테라 장치",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "172": {
+      "id": 172,
+      "name": "마모된 안티키테라 장치",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "173": {
+      "id": 173,
+      "name": "온전한 안티키테라 장치",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "180": {
+      "id": 180,
+      "name": "보이니치 사본 페이지",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "181": {
+      "id": 181,
+      "name": "훼손된 보이니치 사본",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "182": {
+      "id": 182,
+      "name": "편집된 보이니치 사본",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "183": {
+      "id": 183,
+      "name": "온전한 보이니치 사본",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "190": {
+      "id": 190,
+      "name": "수정 하니와 파편",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "191": {
+      "id": 191,
+      "name": "파손된 수정 하니와",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "192": {
+      "id": 192,
+      "name": "수리된 수정 하니와",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "193": {
+      "id": 193,
+      "name": "온전한 수정 하니와",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "200": {
+      "id": 200,
+      "name": "토템폴 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "201": {
+      "id": 201,
+      "name": "파손된 토템폴",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "202": {
+      "id": 202,
+      "name": "수리된 토템폴",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "203": {
+      "id": 203,
+      "name": "온전한 토템폴",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "210": {
+      "id": 210,
+      "name": "고대 전지 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "211": {
+      "id": 211,
+      "name": "파손된 고대 전지",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "212": {
+      "id": 212,
+      "name": "마모된 고대 전지",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "213": {
+      "id": 213,
+      "name": "온전한 고대 전지",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "220": {
+      "id": 220,
+      "name": "황금 양털",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "221": {
+      "id": 221,
+      "name": "황금 털실",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "222": {
+      "id": 222,
+      "name": "황금 양모",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "223": {
+      "id": 223,
+      "name": "황금 드레스",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "230": {
+      "id": 230,
+      "name": "머리가 자라는 인형 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "231": {
+      "id": 231,
+      "name": "파손된 머리가 자라는 인형",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "232": {
+      "id": 232,
+      "name": "수리된 머리가 자라는 인형",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "233": {
+      "id": 233,
+      "name": "온전한 머리가 자라는 인형",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "240": {
+      "id": 240,
+      "name": "디스코 콜간테 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "241": {
+      "id": 241,
+      "name": "파손된 디스코 콜간테",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "242": {
+      "id": 242,
+      "name": "수리된 디스코 콜간테",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "243": {
+      "id": 243,
+      "name": "온전한 디스코 콜간테",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "250": {
+      "id": 250,
+      "name": "아틀란티스 메달 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "251": {
+      "id": 251,
+      "name": "파손된 아틀란티스 메달",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "252": {
+      "id": 252,
+      "name": "마모된 아틀란티스 메달",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "253": {
+      "id": 253,
+      "name": "온전한 아틀란티스 메달",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "260": {
+      "id": 260,
+      "name": "로마 12면체 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "261": {
+      "id": 261,
+      "name": "파손된 로마 12면체",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "262": {
+      "id": 262,
+      "name": "수리된 로마 12면체",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "263": {
+      "id": 263,
+      "name": "온전한 로마 12면체",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "270": {
+      "id": 270,
+      "name": "킴바야 유물 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "271": {
+      "id": 271,
+      "name": "파손된 킴바야 유물",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "272": {
+      "id": 272,
+      "name": "수리된 킴바야 유물",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "273": {
+      "id": 273,
+      "name": "온전한 킴바야 유물",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "280": {
+      "id": 280,
+      "name": "이스탄불 로켓 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "281": {
+      "id": 281,
+      "name": "파손된 이스탄불 로켓",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "282": {
+      "id": 282,
+      "name": "수리된 이스탄불 로켓",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "283": {
+      "id": 283,
+      "name": "온전한 이스탄불 로켓",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "290": {
+      "id": 290,
+      "name": "위니페소키 스톤 조각",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "291": {
+      "id": 291,
+      "name": "파손된 위니페소키 스톤",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "292": {
+      "id": 292,
+      "name": "마모된 위니페소키 스톤",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "293": {
+      "id": 293,
+      "name": "온전한 위니페소키 스톤",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "2000": {
+      "id": 2000,
+      "name": "교양 체육 WB",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "2001": {
+      "id": 2001,
+      "name": "교양 사격 WB",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "2002": {
+      "id": 2002,
+      "name": "교양 위생 WB",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3000": {
+      "id": 3000,
+      "name": "기초 전술 교육 BD\n(백귀야행)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3001": {
+      "id": 3001,
+      "name": "일반 전술 교육 BD\n(백귀야행)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3002": {
+      "id": 3002,
+      "name": "상급 전술 교육 BD\n(백귀야행)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3003": {
+      "id": 3003,
+      "name": "최상급 전술 교육 BD\n(백귀야행)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3010": {
+      "id": 3010,
+      "name": "기초 전술 교육 BD\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3011": {
+      "id": 3011,
+      "name": "일반 전술 교육 BD\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3012": {
+      "id": 3012,
+      "name": "상급 전술 교육 BD\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3013": {
+      "id": 3013,
+      "name": "최상급 전술 교육 BD\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3020": {
+      "id": 3020,
+      "name": "기초 전술 교육 BD\n(트리니티)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3021": {
+      "id": 3021,
+      "name": "일반 전술 교육 BD\n(트리니티)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3022": {
+      "id": 3022,
+      "name": "상급 전술 교육 BD\n(트리니티)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3023": {
+      "id": 3023,
+      "name": "최상급 전술 교육 BD\n(트리니티)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3030": {
+      "id": 3030,
+      "name": "기초 전술 교육 BD\n(게헨나)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3031": {
+      "id": 3031,
+      "name": "일반 전술 교육 BD\n(게헨나)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3032": {
+      "id": 3032,
+      "name": "상급 전술 교육 BD\n(게헨나)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3033": {
+      "id": 3033,
+      "name": "최상급 전술 교육 BD\n(게헨나)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3040": {
+      "id": 3040,
+      "name": "기초 전술 교육 BD\n(아비도스)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3041": {
+      "id": 3041,
+      "name": "일반 전술 교육 BD\n(아비도스)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3042": {
+      "id": 3042,
+      "name": "상급 전술 교육 BD\n(아비도스)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3043": {
+      "id": 3043,
+      "name": "최상급 전술 교육 BD\n(아비도스)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3050": {
+      "id": 3050,
+      "name": "기초 전술 교육 BD\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3051": {
+      "id": 3051,
+      "name": "일반 전술 교육 BD\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3052": {
+      "id": 3052,
+      "name": "상급 전술 교육 BD\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3053": {
+      "id": 3053,
+      "name": "최상급 전술 교육 BD\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3060": {
+      "id": 3060,
+      "name": "기초 전술 교육 BD\n(아리우스)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3061": {
+      "id": 3061,
+      "name": "일반 전술 교육 BD\n(아리우스)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3062": {
+      "id": 3062,
+      "name": "상급 전술 교육 BD\n(아리우스)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3063": {
+      "id": 3063,
+      "name": "최상급 전술 교육 BD\n(아리우스)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3070": {
+      "id": 3070,
+      "name": "기초 전술 교육 BD\n(산해경)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3071": {
+      "id": 3071,
+      "name": "일반 전술 교육 BD\n(산해경)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3072": {
+      "id": 3072,
+      "name": "상급 전술 교육 BD\n(산해경)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3073": {
+      "id": 3073,
+      "name": "최상급 전술 교육 BD\n(산해경)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3080": {
+      "id": 3080,
+      "name": "기초 전술 교육 BD\n(발키리)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3081": {
+      "id": 3081,
+      "name": "일반 전술 교육 BD\n(발키리)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3082": {
+      "id": 3082,
+      "name": "상급 전술 교육 BD\n(발키리)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3083": {
+      "id": 3083,
+      "name": "최상급 전술 교육 BD\n(발키리)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3090": {
+      "id": 3090,
+      "name": "기초 전술 교육 BD\n(하이랜더)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3091": {
+      "id": 3091,
+      "name": "일반 전술 교육 BD\n(하이랜더)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3092": {
+      "id": 3092,
+      "name": "상급 전술 교육 BD\n(하이랜더)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3093": {
+      "id": 3093,
+      "name": "최상급 전술 교육 BD\n(하이랜더)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "3100": {
+      "id": 3100,
+      "name": "기초 전술 교육 BD\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "3101": {
+      "id": 3101,
+      "name": "일반 전술 교육 BD\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "3102": {
+      "id": 3102,
+      "name": "상급 전술 교육 BD\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "3103": {
+      "id": 3103,
+      "name": "최상급 전술 교육 BD\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4000": {
+      "id": 4000,
+      "name": "기초 기술 노트\n(백귀야행)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4001": {
+      "id": 4001,
+      "name": "일반 기술 노트\n(백귀야행)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4002": {
+      "id": 4002,
+      "name": "상급 기술 노트\n(백귀야행)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4003": {
+      "id": 4003,
+      "name": "최상급 기술 노트\n(백귀야행)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4010": {
+      "id": 4010,
+      "name": "기초 기술 노트\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4011": {
+      "id": 4011,
+      "name": "일반 기술 노트\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4012": {
+      "id": 4012,
+      "name": "상급 기술 노트\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4013": {
+      "id": 4013,
+      "name": "최상급 기술 노트\n(붉은겨울)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4020": {
+      "id": 4020,
+      "name": "기초 기술 노트\n(트리니티)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4021": {
+      "id": 4021,
+      "name": "일반 기술 노트\n(트리니티)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4022": {
+      "id": 4022,
+      "name": "상급 기술 노트\n(트리니티)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4023": {
+      "id": 4023,
+      "name": "최상급 기술 노트\n(트리니티)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4030": {
+      "id": 4030,
+      "name": "기초 기술 노트\n(게헨나)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4031": {
+      "id": 4031,
+      "name": "일반 기술 노트\n(게헨나)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4032": {
+      "id": 4032,
+      "name": "상급 기술 노트\n(게헨나)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4033": {
+      "id": 4033,
+      "name": "최상급 기술 노트\n(게헨나)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4040": {
+      "id": 4040,
+      "name": "기초 기술 노트\n(아비도스)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4041": {
+      "id": 4041,
+      "name": "일반 기술 노트\n(아비도스)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4042": {
+      "id": 4042,
+      "name": "상급 기술 노트\n(아비도스)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4043": {
+      "id": 4043,
+      "name": "최상급 기술 노트\n(아비도스)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4050": {
+      "id": 4050,
+      "name": "기초 기술 노트\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4051": {
+      "id": 4051,
+      "name": "일반 기술 노트\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4052": {
+      "id": 4052,
+      "name": "상급 기술 노트\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4053": {
+      "id": 4053,
+      "name": "최상급 기술 노트\n(밀레니엄)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4060": {
+      "id": 4060,
+      "name": "기초 기술 노트\n(아리우스)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4061": {
+      "id": 4061,
+      "name": "일반 기술 노트\n(아리우스)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4062": {
+      "id": 4062,
+      "name": "상급 기술 노트\n(아리우스)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4063": {
+      "id": 4063,
+      "name": "최상급 기술 노트\n(아리우스)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4070": {
+      "id": 4070,
+      "name": "기초 기술 노트\n(산해경)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4071": {
+      "id": 4071,
+      "name": "일반 기술 노트\n(산해경)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4072": {
+      "id": 4072,
+      "name": "상급 기술 노트\n(산해경)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4073": {
+      "id": 4073,
+      "name": "최상급 기술 노트\n(산해경)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4080": {
+      "id": 4080,
+      "name": "기초 기술 노트\n(발키리)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4081": {
+      "id": 4081,
+      "name": "일반 기술 노트\n(발키리)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4082": {
+      "id": 4082,
+      "name": "상급 기술 노트\n(발키리)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4083": {
+      "id": 4083,
+      "name": "최상급 기술 노트\n(발키리)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4090": {
+      "id": 4090,
+      "name": "기초 기술 노트\n(하이랜더)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4091": {
+      "id": 4091,
+      "name": "일반 기술 노트\n(하이랜더)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4092": {
+      "id": 4092,
+      "name": "상급 기술 노트\n(하이랜더)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4093": {
+      "id": 4093,
+      "name": "최상급 기술 노트\n(하이랜더)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "4100": {
+      "id": 4100,
+      "name": "기초 기술 노트\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "4101": {
+      "id": 4101,
+      "name": "일반 기술 노트\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "4102": {
+      "id": 4102,
+      "name": "상급 기술 노트\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "4103": {
+      "id": 4103,
+      "name": "최상급 기술 노트\n(와일드헌트)",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "5000": {
+      "id": 5000,
+      "name": "웨이브캣 베개",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5001": {
+      "id": 5001,
+      "name": "페로로 휠 슬라이드",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5002": {
+      "id": 5002,
+      "name": "에이~팟 프로",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5003": {
+      "id": 5003,
+      "name": "금단의 연애 ~허락되지 않아서, 더욱 아름다운 사랑~",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5004": {
+      "id": 5004,
+      "name": "게임 잡지 『히트걸즈』",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5005": {
+      "id": 5005,
+      "name": "체리로즈 립글로즈",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5006": {
+      "id": 5006,
+      "name": "피부까지 투명해지는 BB크림",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5007": {
+      "id": 5007,
+      "name": "밀리터리 3종 위장용 파운데이션",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5008": {
+      "id": 5008,
+      "name": "고급 쿠키 세트",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5009": {
+      "id": 5009,
+      "name": "<총, 귀여움, 청춘>",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5010": {
+      "id": 5010,
+      "name": "천체망원경",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5011": {
+      "id": 5011,
+      "name": "게임걸 컬러 복각판",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5012": {
+      "id": 5012,
+      "name": "MX-레이션 C형 디저트 맛",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5013": {
+      "id": 5013,
+      "name": "말차맛 라무네",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5014": {
+      "id": 5014,
+      "name": "젤리즈 쿠션",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5015": {
+      "id": 5015,
+      "name": "초절 토끼 탐정~안개로 가려진 온천 미끄덩 사건~",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5016": {
+      "id": 5016,
+      "name": "O-오피트",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5017": {
+      "id": 5017,
+      "name": "매장금의 지도",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5018": {
+      "id": 5018,
+      "name": "코스프레용 뱅뱅이 안경",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5019": {
+      "id": 5019,
+      "name": "세상에서 가장 쓸데없는 기계",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5020": {
+      "id": 5020,
+      "name": "리본이 달린 곰인형",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5021": {
+      "id": 5021,
+      "name": "영화 예매권",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5022": {
+      "id": 5022,
+      "name": "30색 물감 세트",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5023": {
+      "id": 5023,
+      "name": "고전 시집",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5024": {
+      "id": 5024,
+      "name": "귀여운 그릇 세트",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5025": {
+      "id": 5025,
+      "name": "두뇌개발용 퍼즐 큐브",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5026": {
+      "id": 5026,
+      "name": "대형 홀 케이크",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5027": {
+      "id": 5027,
+      "name": "고급 뷔페 초대권",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5028": {
+      "id": 5028,
+      "name": "식충식물 화분",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5029": {
+      "id": 5029,
+      "name": "비싸보이는 금박 욕망의 항아리",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5030": {
+      "id": 5030,
+      "name": "태엽장치 오르골",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5031": {
+      "id": 5031,
+      "name": "자수가 놓인 손수건",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5032": {
+      "id": 5032,
+      "name": "백과사전",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5033": {
+      "id": 5033,
+      "name": "건강보조식품",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5034": {
+      "id": 5034,
+      "name": "여름용 튜브",
+      "category": "Favor",
+      "rarity": "SR",
+      "exp_value": 20
+    },
+    "5100": {
+      "id": 5100,
+      "name": "레이스 베개",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5101": {
+      "id": 5101,
+      "name": "스트리트 오브 불량배 1권",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5102": {
+      "id": 5102,
+      "name": "사무엘라 <더 비욘드>",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5103": {
+      "id": 5103,
+      "name": "고풍스러운 달걀 공예품",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5104": {
+      "id": 5104,
+      "name": "밀피유의 정통 파르페",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5105": {
+      "id": 5105,
+      "name": "에이~북 레어",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5106": {
+      "id": 5106,
+      "name": "세련된 머리빗",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5107": {
+      "id": 5107,
+      "name": "영양가득 종합 비타민 젤리",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5108": {
+      "id": 5108,
+      "name": "최고급 단풍나무 분재",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5109": {
+      "id": 5109,
+      "name": "반짇고리 키트",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5110": {
+      "id": 5110,
+      "name": "음악 연주회 입장권",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5111": {
+      "id": 5111,
+      "name": "하루 세 번 덤벨 세트",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5112": {
+      "id": 5112,
+      "name": "보드 게임 <더 인생>",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5996": {
+      "id": 5996,
+      "name": "싱그러운 꽃다발",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5997": {
+      "id": 5997,
+      "name": "아름다운 꽃다발",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 60
+    },
+    "5998": {
+      "id": 5998,
+      "name": "하츠네 미쿠의 포토 카드",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 20
+    },
+    "5999": {
+      "id": 5999,
+      "name": "반짝이는 꽃다발",
+      "category": "Favor",
+      "rarity": "SSR",
+      "exp_value": 20
+    },
+    "6998": {
+      "id": 6998,
+      "name": "1회 모집 티켓",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "6999": {
+      "id": 6999,
+      "name": "10회 모집 티켓",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "7001": {
+      "id": 7001,
+      "name": "작전 데이터1: D Type",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "9998": {
+      "id": 9998,
+      "name": "비의서 조각",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "9999": {
+      "id": 9999,
+      "name": "비의서",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "10000": {
+      "id": 10000,
+      "name": "아루의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10001": {
+      "id": 10001,
+      "name": "에이미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10002": {
+      "id": 10002,
+      "name": "하루나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10003": {
+      "id": 10003,
+      "name": "히후미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10004": {
+      "id": 10004,
+      "name": "히나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10005": {
+      "id": 10005,
+      "name": "호시노의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10006": {
+      "id": 10006,
+      "name": "이오리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10007": {
+      "id": 10007,
+      "name": "마키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10008": {
+      "id": 10008,
+      "name": "네루의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10009": {
+      "id": 10009,
+      "name": "이즈미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10010": {
+      "id": 10010,
+      "name": "시로코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10011": {
+      "id": 10011,
+      "name": "슌의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10012": {
+      "id": 10012,
+      "name": "스미레의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10013": {
+      "id": 10013,
+      "name": "츠루기의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10014": {
+      "id": 10014,
+      "name": "이즈나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10015": {
+      "id": 10015,
+      "name": "아리스의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10016": {
+      "id": 10016,
+      "name": "미도리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10017": {
+      "id": 10017,
+      "name": "체리노의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10018": {
+      "id": 10018,
+      "name": "유즈의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10019": {
+      "id": 10019,
+      "name": "아즈사의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10020": {
+      "id": 10020,
+      "name": "코하루의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10021": {
+      "id": 10021,
+      "name": "아즈사(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10022": {
+      "id": 10022,
+      "name": "히나(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10023": {
+      "id": 10023,
+      "name": "이오리(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10024": {
+      "id": 10024,
+      "name": "시로코(라이딩)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10025": {
+      "id": 10025,
+      "name": "슌(어린이)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10026": {
+      "id": 10026,
+      "name": "네루(바니걸)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10027": {
+      "id": 10027,
+      "name": "카린(바니걸)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10028": {
+      "id": 10028,
+      "name": "아스나(바니걸)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10029": {
+      "id": 10029,
+      "name": "나츠의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10030": {
+      "id": 10030,
+      "name": "치나츠(온천)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10031": {
+      "id": 10031,
+      "name": "아루(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10032": {
+      "id": 10032,
+      "name": "무츠키(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10033": {
+      "id": 10033,
+      "name": "와카모의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10034": {
+      "id": 10034,
+      "name": "미모리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10035": {
+      "id": 10035,
+      "name": "우이의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10036": {
+      "id": 10036,
+      "name": "히나타의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10037": {
+      "id": 10037,
+      "name": "마리나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10038": {
+      "id": 10038,
+      "name": "미야코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10039": {
+      "id": 10039,
+      "name": "미유의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10040": {
+      "id": 10040,
+      "name": "츠쿠요의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10041": {
+      "id": 10041,
+      "name": "미사키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10042": {
+      "id": 10042,
+      "name": "아츠코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10043": {
+      "id": 10043,
+      "name": "와카모(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10044": {
+      "id": 10044,
+      "name": "노노미(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10045": {
+      "id": 10045,
+      "name": "호시노(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10046": {
+      "id": 10046,
+      "name": "이즈나(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10047": {
+      "id": 10047,
+      "name": "치세(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10048": {
+      "id": 10048,
+      "name": "사오리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10049": {
+      "id": 10049,
+      "name": "카즈사의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10050": {
+      "id": 10050,
+      "name": "코코나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10051": {
+      "id": 10051,
+      "name": "우타하(응원단)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10052": {
+      "id": 10052,
+      "name": "노아의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10053": {
+      "id": 10053,
+      "name": "유우카(체육복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10054": {
+      "id": 10054,
+      "name": "마리(체육복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10055": {
+      "id": 10055,
+      "name": "시구레의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10056": {
+      "id": 10056,
+      "name": "세리나(크리스마스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10057": {
+      "id": 10057,
+      "name": "하루나(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10058": {
+      "id": 10058,
+      "name": "미네의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10059": {
+      "id": 10059,
+      "name": "미카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10060": {
+      "id": 10060,
+      "name": "메구의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10061": {
+      "id": 10061,
+      "name": "사쿠라코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10062": {
+      "id": 10062,
+      "name": "토키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10063": {
+      "id": 10063,
+      "name": "코유키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10064": {
+      "id": 10064,
+      "name": "카요코(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10065": {
+      "id": 10065,
+      "name": "카호의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10066": {
+      "id": 10066,
+      "name": "아리스(메이드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10067": {
+      "id": 10067,
+      "name": "토키(바니걸)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10068": {
+      "id": 10068,
+      "name": "레이사의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10069": {
+      "id": 10069,
+      "name": "루미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10070": {
+      "id": 10070,
+      "name": "미나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10071": {
+      "id": 10071,
+      "name": "미야코(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10072": {
+      "id": 10072,
+      "name": "사키(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10073": {
+      "id": 10073,
+      "name": "우이(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10074": {
+      "id": 10074,
+      "name": "하나코(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10075": {
+      "id": 10075,
+      "name": "메루의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10076": {
+      "id": 10076,
+      "name": "코토리(응원단)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10077": {
+      "id": 10077,
+      "name": "이치카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10078": {
+      "id": 10078,
+      "name": "카스미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10079": {
+      "id": 10079,
+      "name": "미사카 미코토의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10080": {
+      "id": 10080,
+      "name": "쇼쿠호 미사키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10081": {
+      "id": 10081,
+      "name": "유카리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10082": {
+      "id": 10082,
+      "name": "렌게의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10083": {
+      "id": 10083,
+      "name": "키쿄의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10084": {
+      "id": 10084,
+      "name": "코타마(캠핑)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10085": {
+      "id": 10085,
+      "name": "하레(캠핑)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10086": {
+      "id": 10086,
+      "name": "히나(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10087": {
+      "id": 10087,
+      "name": "아코(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10088": {
+      "id": 10088,
+      "name": "카요코(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10089": {
+      "id": 10089,
+      "name": "아루(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10090": {
+      "id": 10090,
+      "name": "우미카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10091": {
+      "id": 10091,
+      "name": "카즈사(밴드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10092": {
+      "id": 10092,
+      "name": "요시미(밴드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10093": {
+      "id": 10093,
+      "name": "키라라의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10094": {
+      "id": 10094,
+      "name": "모모이(메이드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10095": {
+      "id": 10095,
+      "name": "미도리(메이드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10096": {
+      "id": 10096,
+      "name": "칸나(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10097": {
+      "id": 10097,
+      "name": "모에(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10098": {
+      "id": 10098,
+      "name": "호시노(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10100": {
+      "id": 10100,
+      "name": "시로코*테러의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10101": {
+      "id": 10101,
+      "name": "사오리(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10102": {
+      "id": 10102,
+      "name": "히요리(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10103": {
+      "id": 10103,
+      "name": "마리나(치파오)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10104": {
+      "id": 10104,
+      "name": "레이죠의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10105": {
+      "id": 10105,
+      "name": "마리(아이돌)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10106": {
+      "id": 10106,
+      "name": "사쿠라코(아이돌)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10107": {
+      "id": 10107,
+      "name": "치아키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10108": {
+      "id": 10108,
+      "name": "유우카(파자마)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10109": {
+      "id": 10109,
+      "name": "노아(파자마)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10110": {
+      "id": 10110,
+      "name": "세이아의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10111": {
+      "id": 10111,
+      "name": "네루(교복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10112": {
+      "id": 10112,
+      "name": "아스나(교복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10113": {
+      "id": 10113,
+      "name": "세나(사복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10114": {
+      "id": 10114,
+      "name": "주리(아르바이트)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10115": {
+      "id": 10115,
+      "name": "레이의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10116": {
+      "id": 10116,
+      "name": "사오리(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10117": {
+      "id": 10117,
+      "name": "히카리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10118": {
+      "id": 10118,
+      "name": "노조미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10119": {
+      "id": 10119,
+      "name": "나구사의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10120": {
+      "id": 10120,
+      "name": "나츠(밴드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10121": {
+      "id": 10121,
+      "name": "유카리(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10122": {
+      "id": 10122,
+      "name": "미카(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10123": {
+      "id": 10123,
+      "name": "세이아(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10124": {
+      "id": 10124,
+      "name": "하스미(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10125": {
+      "id": 10125,
+      "name": "에리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10126": {
+      "id": 10126,
+      "name": "카노에의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10127": {
+      "id": 10127,
+      "name": "미요의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10128": {
+      "id": 10128,
+      "name": "후유의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10129": {
+      "id": 10129,
+      "name": "스즈미(매지컬)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10130": {
+      "id": 10130,
+      "name": "스바루의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10131": {
+      "id": 10131,
+      "name": "타카네의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10132": {
+      "id": 10132,
+      "name": "츠쿠요(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10133": {
+      "id": 10133,
+      "name": "리오(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10134": {
+      "id": 10134,
+      "name": "아리스(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10135": {
+      "id": 10135,
+      "name": "케이의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10136": {
+      "id": 10136,
+      "name": "에이미(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10137": {
+      "id": 10137,
+      "name": "코노카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10138": {
+      "id": 10138,
+      "name": "레나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10139": {
+      "id": 10139,
+      "name": "니코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "10140": {
+      "id": 10140,
+      "name": "쿠루미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13000": {
+      "id": 13000,
+      "name": "아카네의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13001": {
+      "id": 13001,
+      "name": "치세의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13002": {
+      "id": 13002,
+      "name": "아카리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13003": {
+      "id": 13003,
+      "name": "하스미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13004": {
+      "id": 13004,
+      "name": "노노미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13005": {
+      "id": 13005,
+      "name": "카요코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13006": {
+      "id": 13006,
+      "name": "무츠키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13007": {
+      "id": 13007,
+      "name": "준코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13008": {
+      "id": 13008,
+      "name": "세리카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13009": {
+      "id": 13009,
+      "name": "츠바키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13010": {
+      "id": 13010,
+      "name": "유우카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13011": {
+      "id": 13011,
+      "name": "모모이의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13012": {
+      "id": 13012,
+      "name": "키리노의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13013": {
+      "id": 13013,
+      "name": "모미지의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "13014": {
+      "id": 13014,
+      "name": "렌게(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16000": {
+      "id": 16000,
+      "name": "하루카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16001": {
+      "id": 16001,
+      "name": "아스나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16002": {
+      "id": 16002,
+      "name": "코토리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16003": {
+      "id": 16003,
+      "name": "스즈미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16004": {
+      "id": 16004,
+      "name": "피나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16005": {
+      "id": 16005,
+      "name": "츠루기(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16006": {
+      "id": 16006,
+      "name": "이즈미(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16007": {
+      "id": 16007,
+      "name": "토모에의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16008": {
+      "id": 16008,
+      "name": "후부키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16009": {
+      "id": 16009,
+      "name": "미치루의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16010": {
+      "id": 16010,
+      "name": "히비키(응원단)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16011": {
+      "id": 16011,
+      "name": "하스미(체육복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16012": {
+      "id": 16012,
+      "name": "준코(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16013": {
+      "id": 16013,
+      "name": "코하루(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16014": {
+      "id": 16014,
+      "name": "이부키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16015": {
+      "id": 16015,
+      "name": "아이리(밴드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16016": {
+      "id": 16016,
+      "name": "미네(아이돌)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16017": {
+      "id": 16017,
+      "name": "아오바의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16018": {
+      "id": 16018,
+      "name": "라브의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16019": {
+      "id": 16019,
+      "name": "토키(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "16020": {
+      "id": 16020,
+      "name": "오토기의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000": {
+      "id": 20000,
+      "name": "히비키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20001": {
+      "id": 20001,
+      "name": "카린의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20002": {
+      "id": 20002,
+      "name": "사야의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20003": {
+      "id": 20003,
+      "name": "마시로의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20004": {
+      "id": 20004,
+      "name": "마시로(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20005": {
+      "id": 20005,
+      "name": "히후미(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20006": {
+      "id": 20006,
+      "name": "사야(사복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20007": {
+      "id": 20007,
+      "name": "하츠네 미쿠의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20008": {
+      "id": 20008,
+      "name": "아코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20009": {
+      "id": 20009,
+      "name": "체리노(온천)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20010": {
+      "id": 20010,
+      "name": "노도카(온천)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20011": {
+      "id": 20011,
+      "name": "세리카(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20012": {
+      "id": 20012,
+      "name": "세나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20013": {
+      "id": 20013,
+      "name": "치히로의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20014": {
+      "id": 20014,
+      "name": "사키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20015": {
+      "id": 20015,
+      "name": "카에데의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20016": {
+      "id": 20016,
+      "name": "이로하의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20017": {
+      "id": 20017,
+      "name": "히요리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20018": {
+      "id": 20018,
+      "name": "모에의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20019": {
+      "id": 20019,
+      "name": "아카네(바니걸)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20020": {
+      "id": 20020,
+      "name": "히마리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20021": {
+      "id": 20021,
+      "name": "하나에(크리스마스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20022": {
+      "id": 20022,
+      "name": "후우카(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20023": {
+      "id": 20023,
+      "name": "칸나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20024": {
+      "id": 20024,
+      "name": "나기사의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20025": {
+      "id": 20025,
+      "name": "하루카(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20026": {
+      "id": 20026,
+      "name": "미노리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20027": {
+      "id": 20027,
+      "name": "시로코(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20028": {
+      "id": 20028,
+      "name": "히나타(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20029": {
+      "id": 20029,
+      "name": "미모리(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20030": {
+      "id": 20030,
+      "name": "하루나(체육복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20031": {
+      "id": 20031,
+      "name": "시구레(온천)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20032": {
+      "id": 20032,
+      "name": "에이미(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20033": {
+      "id": 20033,
+      "name": "마코토의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20034": {
+      "id": 20034,
+      "name": "아카리(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20035": {
+      "id": 20035,
+      "name": "츠바키(가이드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20036": {
+      "id": 20036,
+      "name": "세리카(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20037": {
+      "id": 20037,
+      "name": "후부키(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20038": {
+      "id": 20038,
+      "name": "토모에(치파오)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20039": {
+      "id": 20039,
+      "name": "키사키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20040": {
+      "id": 20040,
+      "name": "사츠키의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20041": {
+      "id": 20041,
+      "name": "리오의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20042": {
+      "id": 20042,
+      "name": "마키(캠핑)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20043": {
+      "id": 20043,
+      "name": "이즈미(새해)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20044": {
+      "id": 20044,
+      "name": "스미레(아르바이트)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20045": {
+      "id": 20045,
+      "name": "피나(가이드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20046": {
+      "id": 20046,
+      "name": "니야의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20047": {
+      "id": 20047,
+      "name": "키쿄(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20048": {
+      "id": 20048,
+      "name": "나기사(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20049": {
+      "id": 20049,
+      "name": "미사키(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20050": {
+      "id": 20050,
+      "name": "리츠의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20051": {
+      "id": 20051,
+      "name": "레이사(매지컬)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20052": {
+      "id": 20052,
+      "name": "야쿠모의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20053": {
+      "id": 20053,
+      "name": "미치루(드레스)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20054": {
+      "id": 20054,
+      "name": "히마리(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20055": {
+      "id": 20055,
+      "name": "유즈(무장)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20056": {
+      "id": 20056,
+      "name": "코유키(파자마)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20057": {
+      "id": 20057,
+      "name": "아카네(교복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23000": {
+      "id": 23000,
+      "name": "아이리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23001": {
+      "id": 23001,
+      "name": "후우카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23002": {
+      "id": 23002,
+      "name": "하나에의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23003": {
+      "id": 23003,
+      "name": "하레의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23004": {
+      "id": 23004,
+      "name": "우타하의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23005": {
+      "id": 23005,
+      "name": "아야네의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23006": {
+      "id": 23006,
+      "name": "시즈코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23007": {
+      "id": 23007,
+      "name": "하나코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "23008": {
+      "id": 23008,
+      "name": "마리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26000": {
+      "id": 26000,
+      "name": "치나츠의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26001": {
+      "id": 26001,
+      "name": "코타마의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26002": {
+      "id": 26002,
+      "name": "주리의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26003": {
+      "id": 26003,
+      "name": "세리나의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26004": {
+      "id": 26004,
+      "name": "시미코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26005": {
+      "id": 26005,
+      "name": "요시미의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26006": {
+      "id": 26006,
+      "name": "노도카의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26007": {
+      "id": 26007,
+      "name": "아야네(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26008": {
+      "id": 26008,
+      "name": "시즈코(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26009": {
+      "id": 26009,
+      "name": "유즈(메이드)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26010": {
+      "id": 26010,
+      "name": "미유(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26011": {
+      "id": 26011,
+      "name": "사텐 루이코의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26012": {
+      "id": 26012,
+      "name": "키리노(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26013": {
+      "id": 26013,
+      "name": "아츠코(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26014": {
+      "id": 26014,
+      "name": "카린(교복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "26015": {
+      "id": 26015,
+      "name": "이치카(수영복)의 엘레프",
+      "category": "SecretStone",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80000": {
+      "id": 80000,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80001": {
+      "id": 80001,
+      "name": "여우여우 센베이",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80002": {
+      "id": 80002,
+      "name": "너구리 오코노미야키",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80003": {
+      "id": 80003,
+      "name": "벚꽃 찹쌀떡",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80010": {
+      "id": 80010,
+      "name": "체리노 마트료시카",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80011": {
+      "id": 80011,
+      "name": "체룐카 초콜릿",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80012": {
+      "id": 80012,
+      "name": "수염 크레이프",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80013": {
+      "id": 80013,
+      "name": "붉은 수염 훈장",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80020": {
+      "id": 80020,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80021": {
+      "id": 80021,
+      "name": "비치발리볼",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80022": {
+      "id": 80022,
+      "name": "바다의 집 식권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80023": {
+      "id": 80023,
+      "name": "이상한 폭죽",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80024": {
+      "id": 80024,
+      "name": "아이스박스",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80025": {
+      "id": 80025,
+      "name": "모래놀이 세트",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80026": {
+      "id": 80026,
+      "name": "비치 체어",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80027": {
+      "id": 80027,
+      "name": "파라솔 테이블",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80028": {
+      "id": 80028,
+      "name": "물놀이 장비",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80029": {
+      "id": 80029,
+      "name": "세일링 보드",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80030": {
+      "id": 80030,
+      "name": "게헨나의 교표가 찍힌 보급상자",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80031": {
+      "id": 80031,
+      "name": "미식연구회의 군옥수수",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80032": {
+      "id": 80032,
+      "name": "여름용 불량배 선글라스",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80033": {
+      "id": 80033,
+      "name": "첨벙첨벙 헬멧",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80040": {
+      "id": 80040,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80041": {
+      "id": 80041,
+      "name": "거북 버섯",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80042": {
+      "id": 80042,
+      "name": "오죽순",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80043": {
+      "id": 80043,
+      "name": "인형삼",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80050": {
+      "id": 80050,
+      "name": "초콜릿 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80051": {
+      "id": 80051,
+      "name": "토끼 스티커",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80052": {
+      "id": 80052,
+      "name": "승선권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80053": {
+      "id": 80053,
+      "name": "주사위",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80060": {
+      "id": 80060,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80061": {
+      "id": 80061,
+      "name": "온천 타월",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80062": {
+      "id": 80062,
+      "name": "수염 샴푸",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80063": {
+      "id": 80063,
+      "name": "카피바라 입욕제",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80070": {
+      "id": 80070,
+      "name": "특제 신년 복주머니",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80071": {
+      "id": 80071,
+      "name": "페로로 거울떡",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80072": {
+      "id": 80072,
+      "name": "검은거북파 에마",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80073": {
+      "id": 80073,
+      "name": "새해 오미쿠지 뽑기권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80080": {
+      "id": 80080,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80081": {
+      "id": 80081,
+      "name": "문제아의 반성문",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80082": {
+      "id": 80082,
+      "name": "압수한 불량 막과자",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80083": {
+      "id": 80083,
+      "name": "환경미화활동용 규격 봉투",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80084": {
+      "id": 80084,
+      "name": "발렌타인 데이 외출권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80090": {
+      "id": 80090,
+      "name": "와카모 체포 영장",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80100": {
+      "id": 80100,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80101": {
+      "id": 80101,
+      "name": "미사보",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80102": {
+      "id": 80102,
+      "name": "성가책",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80103": {
+      "id": 80103,
+      "name": "성당 촛대",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80110": {
+      "id": 80110,
+      "name": "무시퀸 카드팩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80111": {
+      "id": 80111,
+      "name": "학원교류회 전단지",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80112": {
+      "id": 80112,
+      "name": "와라쿠 공주님 부채",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80113": {
+      "id": 80113,
+      "name": "닌페로 씨 인형 굿즈",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80120": {
+      "id": 80120,
+      "name": "자재 상자",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80130": {
+      "id": 80130,
+      "name": "지역화폐",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80131": {
+      "id": 80131,
+      "name": "백야당 번쩍번쩍 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80132": {
+      "id": 80132,
+      "name": "반들반들 소라고둥",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80133": {
+      "id": 80133,
+      "name": "여름용 인법도감 두루마리",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80134": {
+      "id": 80134,
+      "name": "해양심층수온천섬 리조트 사용권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80135": {
+      "id": 80135,
+      "name": "무시퀸 크루즈 리조트 사용권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80136": {
+      "id": 80136,
+      "name": "초호화 리조트 사용권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80140": {
+      "id": 80140,
+      "name": "디저트 쿠폰",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80141": {
+      "id": 80141,
+      "name": "민트초코 파르페",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80142": {
+      "id": 80142,
+      "name": "마카롱",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80143": {
+      "id": 80143,
+      "name": "롤웨하스",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80150": {
+      "id": 80150,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80151": {
+      "id": 80151,
+      "name": "오자미",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80152": {
+      "id": 80152,
+      "name": "밀레니엄 깃발",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80153": {
+      "id": 80153,
+      "name": "호루라기",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80160": {
+      "id": 80160,
+      "name": "스포츠 드링크",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80161": {
+      "id": 80161,
+      "name": "계주용 배턴",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80162": {
+      "id": 80162,
+      "name": "단팥빵",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80163": {
+      "id": 80163,
+      "name": "안내 팸플릿",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80170": {
+      "id": 80170,
+      "name": "크리스마스 선물",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80171": {
+      "id": 80171,
+      "name": "크리스마스 양말",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80172": {
+      "id": 80172,
+      "name": "캔디 케인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80173": {
+      "id": 80173,
+      "name": "에그노그",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80180": {
+      "id": 80180,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80181": {
+      "id": 80181,
+      "name": "홍백 어묵",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80182": {
+      "id": 80182,
+      "name": "참돔",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80183": {
+      "id": 80183,
+      "name": "오미쿠지 교환권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80200": {
+      "id": 80200,
+      "name": "다차원 연산 회로",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80201": {
+      "id": 80201,
+      "name": "차원엔진 부속품",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80202": {
+      "id": 80202,
+      "name": "우주 초코버거",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80203": {
+      "id": 80203,
+      "name": "게이트 언락 코드 - 외곽 2지구",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80204": {
+      "id": 80204,
+      "name": "게이트 언락 코드 - 외곽 3지구",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80205": {
+      "id": 80205,
+      "name": "게이트 언락 코드 - 중앙 지구",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80220": {
+      "id": 80220,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80221": {
+      "id": 80221,
+      "name": "총학생회의 안전모",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80222": {
+      "id": 80222,
+      "name": "재무보고서",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80223": {
+      "id": 80223,
+      "name": "명란 과자",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80230": {
+      "id": 80230,
+      "name": "깨끗한 카츄샤",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80231": {
+      "id": 80231,
+      "name": "화장 도구",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80232": {
+      "id": 80232,
+      "name": "고저택의 초대장",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80240": {
+      "id": 80240,
+      "name": "카드 묶음",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80241": {
+      "id": 80241,
+      "name": "현무상회 식권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80242": {
+      "id": 80242,
+      "name": "현룡문 배지",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80243": {
+      "id": 80243,
+      "name": "용매 추출 세트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80250": {
+      "id": 80250,
+      "name": "고급 만년필",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80260": {
+      "id": 80260,
+      "name": "냉동 새우",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80261": {
+      "id": 80261,
+      "name": "조약돌",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80262": {
+      "id": 80262,
+      "name": "조개 껍데기",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80263": {
+      "id": 80263,
+      "name": "마른 불가사리",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80265": {
+      "id": 80265,
+      "name": "주사위 1 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80266": {
+      "id": 80266,
+      "name": "주사위 2 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80267": {
+      "id": 80267,
+      "name": "주사위 3 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80268": {
+      "id": 80268,
+      "name": "주사위 4 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80269": {
+      "id": 80269,
+      "name": "주사위 5 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80270": {
+      "id": 80270,
+      "name": "주사위 6 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80290": {
+      "id": 80290,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80291": {
+      "id": 80291,
+      "name": "양피지 조각",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80292": {
+      "id": 80292,
+      "name": "레몬 열매",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80293": {
+      "id": 80293,
+      "name": "오래된 열쇠",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80300": {
+      "id": 80300,
+      "name": "타로 델 루나",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80301": {
+      "id": 80301,
+      "name": "잉크 카트리지",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80302": {
+      "id": 80302,
+      "name": "타블렛 펜",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80303": {
+      "id": 80303,
+      "name": "온리전 티켓",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80310": {
+      "id": 80310,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80311": {
+      "id": 80311,
+      "name": "열차 티켓",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80312": {
+      "id": 80312,
+      "name": "서류 가방",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80313": {
+      "id": 80313,
+      "name": "승무원 호루라기",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80330": {
+      "id": 80330,
+      "name": "설비 부품",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80331": {
+      "id": 80331,
+      "name": "특이한 나사",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80332": {
+      "id": 80332,
+      "name": "이상한 전선",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80333": {
+      "id": 80333,
+      "name": "미확인 데이터칩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80350": {
+      "id": 80350,
+      "name": "재무용 계산기",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80360": {
+      "id": 80360,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80361": {
+      "id": 80361,
+      "name": "초합금 캠핑 팩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80362": {
+      "id": 80362,
+      "name": "다용도 로프",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80363": {
+      "id": 80363,
+      "name": "S&D 카레 파우더",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80380": {
+      "id": 80380,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80381": {
+      "id": 80381,
+      "name": "고급 칵테일 잔",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80382": {
+      "id": 80382,
+      "name": "테이블 냅킨",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80390": {
+      "id": 80390,
+      "name": "타깃 단서",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80391": {
+      "id": 80391,
+      "name": "공연 팸플릿",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80392": {
+      "id": 80392,
+      "name": "나비넥타이",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80393": {
+      "id": 80393,
+      "name": "오페라 글라스",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80394": {
+      "id": 80394,
+      "name": "발렌타인 데이 외출권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80400": {
+      "id": 80400,
+      "name": "백귀야행 기념 카드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80401": {
+      "id": 80401,
+      "name": "수학여행 안내 계획표",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80402": {
+      "id": 80402,
+      "name": "가이드 깃발",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80403": {
+      "id": 80403,
+      "name": "특별 쿠폰북",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80420": {
+      "id": 80420,
+      "name": "D-Day 달력",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80421": {
+      "id": 80421,
+      "name": "충전용 쿠키",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80422": {
+      "id": 80422,
+      "name": "의욕 증진 캔디",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80423": {
+      "id": 80423,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80440": {
+      "id": 80440,
+      "name": "워터파크 이용권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80441": {
+      "id": 80441,
+      "name": "안전 호루라기",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80442": {
+      "id": 80442,
+      "name": "투척용 구명환",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80443": {
+      "id": 80443,
+      "name": "안전 구명조끼",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80450": {
+      "id": 80450,
+      "name": "게임 부스 이용권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80451": {
+      "id": 80451,
+      "name": "헬멧단 총연합회 기념주화",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80452": {
+      "id": 80452,
+      "name": "포장마차 메뉴판",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80453": {
+      "id": 80453,
+      "name": "대회용 물총",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80460": {
+      "id": 80460,
+      "name": "기념품 인형",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80461": {
+      "id": 80461,
+      "name": "소형 차 선물 세트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80462": {
+      "id": 80462,
+      "name": "육화각 모형",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80463": {
+      "id": 80463,
+      "name": "행운의 열쇠고리",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80470": {
+      "id": 80470,
+      "name": "월영제 상품권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80471": {
+      "id": 80471,
+      "name": "월영제 월병",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80472": {
+      "id": 80472,
+      "name": "연단방 특제 활력 보충제",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80473": {
+      "id": 80473,
+      "name": "월영제 폭죽",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80490": {
+      "id": 80490,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80491": {
+      "id": 80491,
+      "name": "라이브 티켓",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80492": {
+      "id": 80492,
+      "name": "색색 팬라이트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80493": {
+      "id": 80493,
+      "name": "릴렉스 케이크",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80500": {
+      "id": 80500,
+      "name": "수수께끼의 물질",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80520": {
+      "id": 80520,
+      "name": "요괴 MAX 우메보시",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80521": {
+      "id": 80521,
+      "name": "푹신한 베개",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80522": {
+      "id": 80522,
+      "name": "신규 카드팩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80523": {
+      "id": 80523,
+      "name": "<BOOM> 클래식 버전",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80540": {
+      "id": 80540,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80541": {
+      "id": 80541,
+      "name": "엑스포 기념품",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80542": {
+      "id": 80542,
+      "name": "누군가의 분실물",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80560": {
+      "id": 80560,
+      "name": "발렌타인 스탬프",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80561": {
+      "id": 80561,
+      "name": "발렌타인 데이 외출권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80570": {
+      "id": 80570,
+      "name": "파르페 교환권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80571": {
+      "id": 80571,
+      "name": "시식용 샘플 팬케이크",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80572": {
+      "id": 80572,
+      "name": "응급의학부 특제 구급약병",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80573": {
+      "id": 80573,
+      "name": "1회용 세제",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80590": {
+      "id": 80590,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80591": {
+      "id": 80591,
+      "name": "응원용 막대풍선",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80592": {
+      "id": 80592,
+      "name": "프로틴 드링크",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80593": {
+      "id": 80593,
+      "name": "경품 추첨 응모권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80600": {
+      "id": 80600,
+      "name": "하이랜더 기념 스티커",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80601": {
+      "id": 80601,
+      "name": "화물 열차 노선 안내도",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80602": {
+      "id": 80602,
+      "name": "수수께끼 화물",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80603": {
+      "id": 80603,
+      "name": "파이프 렌치",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80630": {
+      "id": 80630,
+      "name": "유카리 목각인형",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80631": {
+      "id": 80631,
+      "name": "나구사 목각인형",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80632": {
+      "id": 80632,
+      "name": "키쿄 목각인형",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80633": {
+      "id": 80633,
+      "name": "렌게 목각인형",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80650": {
+      "id": 80650,
+      "name": "정의실현부 완장",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80651": {
+      "id": 80651,
+      "name": "특등급 각설탕",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80652": {
+      "id": 80652,
+      "name": "트리니티 명물 케이크",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80653": {
+      "id": 80653,
+      "name": "산해경 다원의 명차",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80654": {
+      "id": 80654,
+      "name": "프라이빗 비치 팸플릿",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80660": {
+      "id": 80660,
+      "name": "에리의 타로 카드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80661": {
+      "id": 80661,
+      "name": "카노에의 핫초코",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80662": {
+      "id": 80662,
+      "name": "츠무기의 악보",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80663": {
+      "id": 80663,
+      "name": "레나의 실타래",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80665": {
+      "id": 80665,
+      "name": "주사위 1 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80666": {
+      "id": 80666,
+      "name": "주사위 2 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80667": {
+      "id": 80667,
+      "name": "주사위 3 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80668": {
+      "id": 80668,
+      "name": "주사위 4 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80669": {
+      "id": 80669,
+      "name": "주사위 5 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80670": {
+      "id": 80670,
+      "name": "주사위 6 확정권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80680": {
+      "id": 80680,
+      "name": "기념품샵 플레잉 카드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80681": {
+      "id": 80681,
+      "name": "물감",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80682": {
+      "id": 80682,
+      "name": "대리석 큐브",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80683": {
+      "id": 80683,
+      "name": "북 벨트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80700": {
+      "id": 80700,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80701": {
+      "id": 80701,
+      "name": "놀이공원 티켓",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80702": {
+      "id": 80702,
+      "name": "팝콘통",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80703": {
+      "id": 80703,
+      "name": "보더랜드 코인",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80710": {
+      "id": 80710,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80711": {
+      "id": 80711,
+      "name": "평론 수첩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80712": {
+      "id": 80712,
+      "name": "판매 영수증 묶음",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80713": {
+      "id": 80713,
+      "name": "문화 서적 샘플",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80730": {
+      "id": 80730,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80731": {
+      "id": 80731,
+      "name": "닌자 이어 오너먼트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80732": {
+      "id": 80732,
+      "name": "패셔너블 쥘부채",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80733": {
+      "id": 80733,
+      "name": "멘키치페이 프리미엄 카드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80740": {
+      "id": 80740,
+      "name": "예언자의 코어",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80750": {
+      "id": 80750,
+      "name": "분석 USB",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80754": {
+      "id": 80754,
+      "name": "수수께끼의 물질 A",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80755": {
+      "id": 80755,
+      "name": "수수께끼의 물질 B",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80756": {
+      "id": 80756,
+      "name": "아방가르드 코인 A",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80757": {
+      "id": 80757,
+      "name": "아방가르드 코인 B",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80758": {
+      "id": 80758,
+      "name": "프라이빗 비치 팸플릿",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80759": {
+      "id": 80759,
+      "name": "수수께끼의 물질 C",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80760": {
+      "id": 80760,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80761": {
+      "id": 80761,
+      "name": "찢겨나간 노트 페이지",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80762": {
+      "id": 80762,
+      "name": "정체 모를 케이블",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80763": {
+      "id": 80763,
+      "name": "예비 게임 패드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80770": {
+      "id": 80770,
+      "name": "발렌타인 스탬프",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80771": {
+      "id": 80771,
+      "name": "발렌타인 데이 외출권",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80780": {
+      "id": 80780,
+      "name": "수수께끼의 흔적",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80781": {
+      "id": 80781,
+      "name": "수상한 잡지",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80782": {
+      "id": 80782,
+      "name": "수상한 건강 상품",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80783": {
+      "id": 80783,
+      "name": "수상한 부적",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80800": {
+      "id": 80800,
+      "name": "이벤트 포인트",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80801": {
+      "id": 80801,
+      "name": "쿨링팩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80802": {
+      "id": 80802,
+      "name": "SRT 소대용 전투 식량",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80803": {
+      "id": 80803,
+      "name": "오이향 치약",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80804": {
+      "id": 80804,
+      "name": "경로가 표시된 지도",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80805": {
+      "id": 80805,
+      "name": "난수암호",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80806": {
+      "id": 80806,
+      "name": "폭탄 단면도",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80807": {
+      "id": 80807,
+      "name": "미반납 도서와 도서관 카드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80808": {
+      "id": 80808,
+      "name": "SD 카드",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80809": {
+      "id": 80809,
+      "name": "신문 스크랩",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "80810": {
+      "id": 80810,
+      "name": "검표된 열차표",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "100000": {
+      "id": 100000,
+      "name": "선물 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "100001": {
+      "id": 100001,
+      "name": "가구 박스(☆3)",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "100008": {
+      "id": 100008,
+      "name": "선물 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "100009": {
+      "id": 100009,
+      "name": "고급 선물 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150000": {
+      "id": 150000,
+      "name": "기초 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150001": {
+      "id": 150001,
+      "name": "일반 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150002": {
+      "id": 150002,
+      "name": "상급 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150003": {
+      "id": 150003,
+      "name": "최상급 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150004": {
+      "id": 150004,
+      "name": "기초 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150005": {
+      "id": 150005,
+      "name": "일반 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150006": {
+      "id": 150006,
+      "name": "상급 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150007": {
+      "id": 150007,
+      "name": "최상급 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150008": {
+      "id": 150008,
+      "name": "오파츠 선택 상자1",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150009": {
+      "id": 150009,
+      "name": "오파츠 선택 상자2",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150010": {
+      "id": 150010,
+      "name": "오파츠 선택 상자3",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150011": {
+      "id": 150011,
+      "name": "오파츠 선택 상자4",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150012": {
+      "id": 150012,
+      "name": "기초 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150013": {
+      "id": 150013,
+      "name": "일반 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150014": {
+      "id": 150014,
+      "name": "상급 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150015": {
+      "id": 150015,
+      "name": "최상급 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150016": {
+      "id": 150016,
+      "name": "기초 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150017": {
+      "id": 150017,
+      "name": "일반 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150018": {
+      "id": 150018,
+      "name": "상급 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150019": {
+      "id": 150019,
+      "name": "최상급 기술 노트 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150020": {
+      "id": 150020,
+      "name": "기초 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150021": {
+      "id": 150021,
+      "name": "일반 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150022": {
+      "id": 150022,
+      "name": "상급 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150023": {
+      "id": 150023,
+      "name": "최상급 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150024": {
+      "id": 150024,
+      "name": "기초 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150025": {
+      "id": 150025,
+      "name": "일반 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150026": {
+      "id": 150026,
+      "name": "상급 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150027": {
+      "id": 150027,
+      "name": "최상급 전술 교육 BD 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150028": {
+      "id": 150028,
+      "name": "T2 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150029": {
+      "id": 150029,
+      "name": "T3 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150030": {
+      "id": 150030,
+      "name": "T4 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150031": {
+      "id": 150031,
+      "name": "T5 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150032": {
+      "id": 150032,
+      "name": "T6 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150033": {
+      "id": 150033,
+      "name": "T7 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150041": {
+      "id": 150041,
+      "name": "T8 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150042": {
+      "id": 150042,
+      "name": "일반 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "150043": {
+      "id": 150043,
+      "name": "상급 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150044": {
+      "id": 150044,
+      "name": "최상급 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "150045": {
+      "id": 150045,
+      "name": "T9 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "150047": {
+      "id": 150047,
+      "name": "WB 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "150048": {
+      "id": 150048,
+      "name": "T10 장비 설계도 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "151000": {
+      "id": 151000,
+      "name": "기초 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "151001": {
+      "id": 151001,
+      "name": "모모프렌즈 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151002": {
+      "id": 151002,
+      "name": "젤리즈 오락실 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151003": {
+      "id": 151003,
+      "name": "발렌타인 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151004": {
+      "id": 151004,
+      "name": "여름 리조트 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151005": {
+      "id": 151005,
+      "name": "할로윈 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151006": {
+      "id": 151006,
+      "name": "전통 온천장 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151007": {
+      "id": 151007,
+      "name": "새해 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151008": {
+      "id": 151008,
+      "name": "밀리터리 캠핑장 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151009": {
+      "id": 151009,
+      "name": "비치사이드 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151010": {
+      "id": 151010,
+      "name": "대운동회 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151011": {
+      "id": 151011,
+      "name": "아비도스 교실 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151012": {
+      "id": 151012,
+      "name": "게임개발부 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151013": {
+      "id": 151013,
+      "name": "선샤인 리조트 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151014": {
+      "id": 151014,
+      "name": "쇼핑몰 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151015": {
+      "id": 151015,
+      "name": "게헨나 파티 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151016": {
+      "id": 151016,
+      "name": "트리니티 교실 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151017": {
+      "id": 151017,
+      "name": "DJ 파티장 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151018": {
+      "id": 151018,
+      "name": "백귀야행 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151019": {
+      "id": 151019,
+      "name": "밀레니엄 타워 라운지 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151020": {
+      "id": 151020,
+      "name": "하이랜더 열차 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151021": {
+      "id": 151021,
+      "name": "티파티 세트 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151022": {
+      "id": 151022,
+      "name": "와일드헌트 캠퍼스 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151023": {
+      "id": 151023,
+      "name": "수송선 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151024": {
+      "id": 151024,
+      "name": "발키리 경찰학교 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151991": {
+      "id": 151991,
+      "name": "일반 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "151992": {
+      "id": 151992,
+      "name": "상급 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "151993": {
+      "id": 151993,
+      "name": "최상급 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "151999": {
+      "id": 151999,
+      "name": "기타 테마 가구 선택 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "160000": {
+      "id": 160000,
+      "name": "작전 데이터2: D-X Type",
+      "category": "Coin",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180000": {
+      "id": 180000,
+      "name": "스위트 초코 감자칩",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180001": {
+      "id": 180001,
+      "name": "엔젤 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180002": {
+      "id": 180002,
+      "name": "대용량 미니 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180003": {
+      "id": 180003,
+      "name": "아로나의 초코 진저 쿠키",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180004": {
+      "id": 180004,
+      "name": "발렌타인 페로로",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180005": {
+      "id": 180005,
+      "name": "레이션 D형",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180006": {
+      "id": 180006,
+      "name": "해피 핫 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180007": {
+      "id": 180007,
+      "name": "쇼콜라데 게헨나",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180008": {
+      "id": 180008,
+      "name": "대량의 판 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180009": {
+      "id": 180009,
+      "name": "초코 당고",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180010": {
+      "id": 180010,
+      "name": "데스 러브",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180011": {
+      "id": 180011,
+      "name": "라이더의 간식",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180012": {
+      "id": 180012,
+      "name": "초콜릿 바다의 친구들",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180013": {
+      "id": 180013,
+      "name": "사막의 장미",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180014": {
+      "id": 180014,
+      "name": "비너스의 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180015": {
+      "id": 180015,
+      "name": "도청장치 14호",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180016": {
+      "id": 180016,
+      "name": "핫 코코아 캔",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180017": {
+      "id": 180017,
+      "name": "파베 초콜릿 세트 (영수증 첨부)",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180018": {
+      "id": 180018,
+      "name": "용사의 초콜릿 (아이템)",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180019": {
+      "id": 180019,
+      "name": "수제 초코 스네일",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180020": {
+      "id": 180020,
+      "name": "초코맛 요괴 MAX",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180021": {
+      "id": 180021,
+      "name": "초코맛 스프레이",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180022": {
+      "id": 180022,
+      "name": "초콜릿 포탄 Mk.2",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180023": {
+      "id": 180023,
+      "name": "초콜릿 나사",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180024": {
+      "id": 180024,
+      "name": "체룐카",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180025": {
+      "id": 180025,
+      "name": "개량형 체룐카",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180026": {
+      "id": 180026,
+      "name": "카카오 열매",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180027": {
+      "id": 180027,
+      "name": "불로불사의 영약 (실패작)",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180028": {
+      "id": 180028,
+      "name": "어른의 럼 봉봉",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180029": {
+      "id": 180029,
+      "name": "초콜릿 수갑",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180030": {
+      "id": 180030,
+      "name": "특제 초코 트롤러",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180031": {
+      "id": 180031,
+      "name": "초코 하니와",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180032": {
+      "id": 180032,
+      "name": "리틀 불렛",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180033": {
+      "id": 180033,
+      "name": "히나의 수제 풍기 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180034": {
+      "id": 180034,
+      "name": "당신을 위한 한 입의 휴식",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180035": {
+      "id": 180035,
+      "name": "엄청! 맛있는! 초콜릿!",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180036": {
+      "id": 180036,
+      "name": "사장님의 최고급 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180037": {
+      "id": 180037,
+      "name": "지옥의 러시안룰렛",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180038": {
+      "id": 180038,
+      "name": "코코아가 담긴 머그잔",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180039": {
+      "id": 180039,
+      "name": "주리의 전력을 다한 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180040": {
+      "id": 180040,
+      "name": "함께 한 시간의 결과",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180041": {
+      "id": 180041,
+      "name": "종합 초콜릿 과자 선물 세트",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180042": {
+      "id": 180042,
+      "name": "고르고 고른 하나",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180043": {
+      "id": 180043,
+      "name": "진격! 우파루파 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180044": {
+      "id": 180044,
+      "name": "미도리의 수제 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180045": {
+      "id": 180045,
+      "name": "치세표 초콜릿 츠지우라센베이",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180046": {
+      "id": 180046,
+      "name": "백야당 한정 디저트",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180047": {
+      "id": 180047,
+      "name": "닌자 초콜릿 제49번 세트!",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180048": {
+      "id": 180048,
+      "name": "숙면 초콜릿과 숙면 도구 키트",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180049": {
+      "id": 180049,
+      "name": "와카모의 애정 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180050": {
+      "id": 180050,
+      "name": "미식의 증명(말차맛)",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180051": {
+      "id": 180051,
+      "name": "발렌타인 성자 스컬맨",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180052": {
+      "id": 180052,
+      "name": "러블리 크로스라인",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180053": {
+      "id": 180053,
+      "name": "트윙클 스타",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180054": {
+      "id": 180054,
+      "name": "초코 시스터 상",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180055": {
+      "id": 180055,
+      "name": "구슬 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180056": {
+      "id": 180056,
+      "name": "비 위드 유",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180057": {
+      "id": 180057,
+      "name": "페니로열 초코민트",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180058": {
+      "id": 180058,
+      "name": "리미티드 요시미 에디션",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180059": {
+      "id": 180059,
+      "name": "말보다 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180060": {
+      "id": 180060,
+      "name": "포춘 초콜릿(자작)",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180061": {
+      "id": 180061,
+      "name": "밴디지 초코",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180062": {
+      "id": 180062,
+      "name": "카카오 99.99%",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180063": {
+      "id": 180063,
+      "name": "트위스티드 발렌타인",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180064": {
+      "id": 180064,
+      "name": "메이드 바이 메이드",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180065": {
+      "id": 180065,
+      "name": "초코 오므라이스",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180066": {
+      "id": 180066,
+      "name": "초콜릿 판화 : 용",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180067": {
+      "id": 180067,
+      "name": "발렌타인 비기닝",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180068": {
+      "id": 180068,
+      "name": "달콤한 잔",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180069": {
+      "id": 180069,
+      "name": "아망드 크림슨",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180070": {
+      "id": 180070,
+      "name": "서투르게 포장된 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180071": {
+      "id": 180071,
+      "name": "꼬마 아이들용 초코볼",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180072": {
+      "id": 180072,
+      "name": "촉촉한 초코쿠키",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180073": {
+      "id": 180073,
+      "name": "딸기가 올라간 초코 조각케이크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180074": {
+      "id": 180074,
+      "name": "포장된 작은 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180075": {
+      "id": 180075,
+      "name": "꼼꼼하게 포장된 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180076": {
+      "id": 180076,
+      "name": "꽃과 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180077": {
+      "id": 180077,
+      "name": "키디바 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180078": {
+      "id": 180078,
+      "name": "벚꽃 빛 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180079": {
+      "id": 180079,
+      "name": "최강의 초코사우루스",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180080": {
+      "id": 180080,
+      "name": "반쯤 녹은 롭이어 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180081": {
+      "id": 180081,
+      "name": "초천재청초계병약미소녀해커's 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180082": {
+      "id": 180082,
+      "name": "이로하의 수제 막대 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180083": {
+      "id": 180083,
+      "name": "인법연구부 배지 세트 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180084": {
+      "id": 180084,
+      "name": "초콜릿을 넣은 당근 케이크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180085": {
+      "id": 180085,
+      "name": "초콜릿 스모어",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180086": {
+      "id": 180086,
+      "name": "보급품 초콜릿 캐러멜",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180087": {
+      "id": 180087,
+      "name": "바크 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180088": {
+      "id": 180088,
+      "name": "초콜릿 잉크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180089": {
+      "id": 180089,
+      "name": "특별 초콜릿 공로 훈장",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180090": {
+      "id": 180090,
+      "name": "시구레 비터 스페셜",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180091": {
+      "id": 180091,
+      "name": "병아리 모양 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180092": {
+      "id": 180092,
+      "name": "자몽 칩 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180093": {
+      "id": 180093,
+      "name": "수제 초코스틱",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180094": {
+      "id": 180094,
+      "name": "초코 슬리퍼",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180095": {
+      "id": 180095,
+      "name": "시크릿 메시지",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180096": {
+      "id": 180096,
+      "name": "스스로 내린 선택",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180097": {
+      "id": 180097,
+      "name": "발렌타인 도전장",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180098": {
+      "id": 180098,
+      "name": "온천 달걀 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180099": {
+      "id": 180099,
+      "name": "초콜릿 월병",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180100": {
+      "id": 180100,
+      "name": "현룡문 문양 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180101": {
+      "id": 180101,
+      "name": "초콜릿 열쇠고리 굿즈",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180102": {
+      "id": 180102,
+      "name": "나기사의 평범한 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180103": {
+      "id": 180103,
+      "name": "고열량 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180104": {
+      "id": 180104,
+      "name": "인식의 차이",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180105": {
+      "id": 180105,
+      "name": "프라나의 프라나 듬뿍 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180106": {
+      "id": 180106,
+      "name": "자화상 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180107": {
+      "id": 180107,
+      "name": "최고, 최선, 궁극의 수제 초콜릿 케이크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180108": {
+      "id": 180108,
+      "name": "전략홍보팀장의 수제 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180109": {
+      "id": 180109,
+      "name": "늘 마시던 커피",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180110": {
+      "id": 180110,
+      "name": "둘이서 함께 만든 생초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180111": {
+      "id": 180111,
+      "name": "작전참모의 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180112": {
+      "id": 180112,
+      "name": "카데노코지 부적과 초콜릿 막과자",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180113": {
+      "id": 180113,
+      "name": "이부키가 만든 초콜릿 푸딩",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180114": {
+      "id": 180114,
+      "name": "미카 특제☆ 초코 롤케이크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180115": {
+      "id": 180115,
+      "name": "의장님이 준비한 최고급 초콜릿 분수 기계",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180116": {
+      "id": 180116,
+      "name": "가마 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180117": {
+      "id": 180117,
+      "name": "S+ 초콜릿 크레이프",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180118": {
+      "id": 180118,
+      "name": "'그 초콜릿' 한가득",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180119": {
+      "id": 180119,
+      "name": "카카오닙스 차",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180120": {
+      "id": 180120,
+      "name": "철사장 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180121": {
+      "id": 180121,
+      "name": "사츠키의 시크릿 레시피 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180122": {
+      "id": 180122,
+      "name": "치아키의 주간만마전 발렌타인 호외편",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180123": {
+      "id": 180123,
+      "name": "세이아의 함정 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180124": {
+      "id": 180124,
+      "name": "밀레니엄 교표 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180125": {
+      "id": 180125,
+      "name": "야구 용품 3신기 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180126": {
+      "id": 180126,
+      "name": "초- 신상 초코볼!!",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180127": {
+      "id": 180127,
+      "name": "피로회복 영양젤리",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180128": {
+      "id": 180128,
+      "name": "구겨진 봉투와 쪽지",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180129": {
+      "id": 180129,
+      "name": "하얀 여인",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180130": {
+      "id": 180130,
+      "name": "상자 속에 든 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180131": {
+      "id": 180131,
+      "name": "마력(?)이 담긴 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180132": {
+      "id": 180132,
+      "name": "유령 초콜릿 머핀",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180133": {
+      "id": 180133,
+      "name": "문학적인 티라미수",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180134": {
+      "id": 180134,
+      "name": "특대형 초콜릿 곱스토퍼",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180135": {
+      "id": 180135,
+      "name": "초코 스태츄",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180136": {
+      "id": 180136,
+      "name": "절취선 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180137": {
+      "id": 180137,
+      "name": "초코 머랭 쿠키",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180138": {
+      "id": 180138,
+      "name": "카르토슈카",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180139": {
+      "id": 180139,
+      "name": "초콜릿 미다비크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "180140": {
+      "id": 180140,
+      "name": "시판(?) 초콜릿",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "190000": {
+      "id": 190000,
+      "name": "기초 기술 노트 추첨 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "190001": {
+      "id": 190001,
+      "name": "일반 기술 노트 추첨 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "190002": {
+      "id": 190002,
+      "name": "상급 기술 노트 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "190003": {
+      "id": 190003,
+      "name": "최상급 기술 노트 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "190010": {
+      "id": 190010,
+      "name": "기초 전술 교육 BD 추첨 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "190011": {
+      "id": 190011,
+      "name": "일반 전술 교육 BD 추첨 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "190012": {
+      "id": 190012,
+      "name": "상급 전술 교육 BD 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "190013": {
+      "id": 190013,
+      "name": "최상급 전술 교육 BD 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "190020": {
+      "id": 190020,
+      "name": "오파츠 추첨 상자1",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "190021": {
+      "id": 190021,
+      "name": "오파츠 추첨 상자2",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "190022": {
+      "id": 190022,
+      "name": "오파츠 추첨 상자3",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "190023": {
+      "id": 190023,
+      "name": "오파츠 추첨 상자4",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191000": {
+      "id": 191000,
+      "name": "기초 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "191001": {
+      "id": 191001,
+      "name": "모모프렌즈 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191002": {
+      "id": 191002,
+      "name": "젤리즈 오락실 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191003": {
+      "id": 191003,
+      "name": "발렌타인 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191004": {
+      "id": 191004,
+      "name": "여름 리조트 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191005": {
+      "id": 191005,
+      "name": "할로윈 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191006": {
+      "id": 191006,
+      "name": "전통 온천장 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191007": {
+      "id": 191007,
+      "name": "새해 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191008": {
+      "id": 191008,
+      "name": "밀리터리 캠핑장 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191009": {
+      "id": 191009,
+      "name": "비치사이드 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191010": {
+      "id": 191010,
+      "name": "대운동회 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191011": {
+      "id": 191011,
+      "name": "아비도스 교실 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191012": {
+      "id": 191012,
+      "name": "게임개발부 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191013": {
+      "id": 191013,
+      "name": "선샤인 리조트 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191014": {
+      "id": 191014,
+      "name": "쇼핑몰 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191015": {
+      "id": 191015,
+      "name": "게헨나 파티 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191016": {
+      "id": 191016,
+      "name": "트리니티 교실 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191017": {
+      "id": 191017,
+      "name": "DJ 파티장 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191018": {
+      "id": 191018,
+      "name": "백귀야행 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191019": {
+      "id": 191019,
+      "name": "밀레니엄 타워 라운지 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191020": {
+      "id": 191020,
+      "name": "하이랜더 열차 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191021": {
+      "id": 191021,
+      "name": "티파티 세트 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191022": {
+      "id": 191022,
+      "name": "와일드헌트 캠퍼스 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191023": {
+      "id": 191023,
+      "name": "수송선 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191024": {
+      "id": 191024,
+      "name": "발키리 경찰학교 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191991": {
+      "id": 191991,
+      "name": "일반 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "R",
+      "exp_value": 0
+    },
+    "191992": {
+      "id": 191992,
+      "name": "상급 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SR",
+      "exp_value": 0
+    },
+    "191993": {
+      "id": 191993,
+      "name": "최상급 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "191999": {
+      "id": 191999,
+      "name": "기타 테마 가구 추첨 상자",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "200000": {
+      "id": 200000,
+      "name": "프레나파테스의 어른의 카드",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "200001": {
+      "id": 200001,
+      "name": "산산이 조각난 어른의 카드",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "200002": {
+      "id": 200002,
+      "name": "프레나파테스의 어른의 카드",
+      "category": "Consumable",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "200003": {
+      "id": 200003,
+      "name": "산산이 조각난 어른의 카드",
+      "category": "Material",
+      "rarity": "SSR",
+      "exp_value": 0
+    },
+    "20000000": {
+      "id": 20000000,
+      "name": "아로나의 스탬프",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000001": {
+      "id": 20000001,
+      "name": "게임잡지",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000002": {
+      "id": 20000002,
+      "name": "만점 시험지",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000003": {
+      "id": 20000003,
+      "name": "임무 보고서",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000004": {
+      "id": 20000004,
+      "name": "마시멜로 꼬치",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000005": {
+      "id": 20000005,
+      "name": "낡은 아리우스 배지",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000006": {
+      "id": 20000006,
+      "name": "수제 화환",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000007": {
+      "id": 20000007,
+      "name": "AMAS의 잔해",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000008": {
+      "id": 20000008,
+      "name": "추억이 담긴 필름",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000009": {
+      "id": 20000009,
+      "name": "용역부 전단지",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000010": {
+      "id": 20000010,
+      "name": "숯불 닭꼬치",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000011": {
+      "id": 20000011,
+      "name": "시바세키 특제 점보 라멘",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000012": {
+      "id": 20000012,
+      "name": "아비도스 학생증 (1학년)",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000013": {
+      "id": 20000013,
+      "name": "치세냥 인형",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20000014": {
+      "id": 20000014,
+      "name": "아리우스 학생 수첩",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20001000": {
+      "id": 20001000,
+      "name": "아로나의 스탬프",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20001001": {
+      "id": 20001001,
+      "name": "커피가 담긴 머그잔",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    },
+    "20002000": {
+      "id": 20002000,
+      "name": "수제 롤케이크",
+      "category": "Collectible",
+      "rarity": "N",
+      "exp_value": 0
+    }
+  },
+  "equipment": {
+    "1": {
+      "id": 1,
+      "name": "하급 강화석",
+      "category": "Exp",
+      "rarity": "N",
+      "level_up_feed_exp": 90
+    },
+    "2": {
+      "id": 2,
+      "name": "일반 강화석",
+      "category": "Exp",
+      "rarity": "R",
+      "level_up_feed_exp": 360
+    },
+    "3": {
+      "id": 3,
+      "name": "상급 강화석",
+      "category": "Exp",
+      "rarity": "SR",
+      "level_up_feed_exp": 1440
+    },
+    "4": {
+      "id": 4,
+      "name": "최상급 강화석",
+      "category": "Exp",
+      "rarity": "SSR",
+      "level_up_feed_exp": 5760
+    },
+    "10": {
+      "id": 10,
+      "name": "녹슨 스프링",
+      "category": "WeaponExpGrowthA",
+      "rarity": "N",
+      "level_up_feed_exp": 10
+    },
+    "11": {
+      "id": 11,
+      "name": "온전한 스프링",
+      "category": "WeaponExpGrowthA",
+      "rarity": "R",
+      "level_up_feed_exp": 50
+    },
+    "12": {
+      "id": 12,
+      "name": "크로뮴 스프링",
+      "category": "WeaponExpGrowthA",
+      "rarity": "SR",
+      "level_up_feed_exp": 200
+    },
+    "13": {
+      "id": 13,
+      "name": "티타늄 스프링",
+      "category": "WeaponExpGrowthA",
+      "rarity": "SSR",
+      "level_up_feed_exp": 1000
+    },
+    "20": {
+      "id": 20,
+      "name": "녹슨 해머",
+      "category": "WeaponExpGrowthB",
+      "rarity": "N",
+      "level_up_feed_exp": 10
+    },
+    "21": {
+      "id": 21,
+      "name": "온전한 해머",
+      "category": "WeaponExpGrowthB",
+      "rarity": "R",
+      "level_up_feed_exp": 50
+    },
+    "22": {
+      "id": 22,
+      "name": "크로뮴 해머",
+      "category": "WeaponExpGrowthB",
+      "rarity": "SR",
+      "level_up_feed_exp": 200
+    },
+    "23": {
+      "id": 23,
+      "name": "티타늄 해머",
+      "category": "WeaponExpGrowthB",
+      "rarity": "SSR",
+      "level_up_feed_exp": 1000
+    },
+    "30": {
+      "id": 30,
+      "name": "녹슨 총열",
+      "category": "WeaponExpGrowthC",
+      "rarity": "N",
+      "level_up_feed_exp": 10
+    },
+    "31": {
+      "id": 31,
+      "name": "온전한 총열",
+      "category": "WeaponExpGrowthC",
+      "rarity": "R",
+      "level_up_feed_exp": 50
+    },
+    "32": {
+      "id": 32,
+      "name": "크로뮴 총열",
+      "category": "WeaponExpGrowthC",
+      "rarity": "SR",
+      "level_up_feed_exp": 200
+    },
+    "33": {
+      "id": 33,
+      "name": "티타늄 총열",
+      "category": "WeaponExpGrowthC",
+      "rarity": "SSR",
+      "level_up_feed_exp": 1000
+    },
+    "40": {
+      "id": 40,
+      "name": "녹슨 공이",
+      "category": "WeaponExpGrowthZ",
+      "rarity": "N",
+      "level_up_feed_exp": 10
+    },
+    "41": {
+      "id": 41,
+      "name": "온전한 공이",
+      "category": "WeaponExpGrowthZ",
+      "rarity": "R",
+      "level_up_feed_exp": 50
+    },
+    "42": {
+      "id": 42,
+      "name": "크로뮴 공이",
+      "category": "WeaponExpGrowthZ",
+      "rarity": "SR",
+      "level_up_feed_exp": 200
+    },
+    "43": {
+      "id": 43,
+      "name": "티타늄 공이",
+      "category": "WeaponExpGrowthZ",
+      "rarity": "SSR",
+      "level_up_feed_exp": 1000
+    },
+    "1000": {
+      "id": 1000,
+      "name": "무지 캡모자",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1001": {
+      "id": 1001,
+      "name": "니트 털모자",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1002": {
+      "id": 1002,
+      "name": "빅 브라더 페도라",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1003": {
+      "id": 1003,
+      "name": "리본 베레모",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1004": {
+      "id": 1004,
+      "name": "방탄 헬멧",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1005": {
+      "id": 1005,
+      "name": "프릴 미니 햇",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1006": {
+      "id": 1006,
+      "name": "버킷 햇",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1007": {
+      "id": 1007,
+      "name": "리프 리본 페도라",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1008": {
+      "id": 1008,
+      "name": "세일러 햇",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "1009": {
+      "id": 1009,
+      "name": "게이밍 헬멧",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2000": {
+      "id": 2000,
+      "name": "스포츠용 장갑",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2001": {
+      "id": 2001,
+      "name": "니트 벙어리 장갑",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2002": {
+      "id": 2002,
+      "name": "페로로 오븐 장갑",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2003": {
+      "id": 2003,
+      "name": "가죽 글러브",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2004": {
+      "id": 2004,
+      "name": "택티컬 글러브",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2005": {
+      "id": 2005,
+      "name": "레이스 글러브",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2006": {
+      "id": 2006,
+      "name": "팔 토시",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2007": {
+      "id": 2007,
+      "name": "진주 털실 장갑",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2008": {
+      "id": 2008,
+      "name": "세일링 글러브",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "2009": {
+      "id": 2009,
+      "name": "슈퍼 글러브",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3000": {
+      "id": 3000,
+      "name": "핑크 스니커즈",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3001": {
+      "id": 3001,
+      "name": "어그 부츠",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3002": {
+      "id": 3002,
+      "name": "핑키파카 슬리퍼",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3003": {
+      "id": 3003,
+      "name": "앤티크 에나멜 로퍼",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3004": {
+      "id": 3004,
+      "name": "전술 부츠",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3005": {
+      "id": 3005,
+      "name": "펌프스 힐",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3006": {
+      "id": 3006,
+      "name": "캐주얼 스니커즈",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3007": {
+      "id": 3007,
+      "name": "방수 등산 부츠",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3008": {
+      "id": 3008,
+      "name": "아쿠아 샌들",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "3009": {
+      "id": 3009,
+      "name": "게이밍 슬리퍼",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4000": {
+      "id": 4000,
+      "name": "방수 스포츠백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4001": {
+      "id": 4001,
+      "name": "방한용 크로스백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4002": {
+      "id": 4002,
+      "name": "페로로 백팩",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4003": {
+      "id": 4003,
+      "name": "감색 스쿨백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4004": {
+      "id": 4004,
+      "name": "전술 란도셀",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4005": {
+      "id": 4005,
+      "name": "데빌 윙 토트백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4006": {
+      "id": 4006,
+      "name": "스트릿 백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4007": {
+      "id": 4007,
+      "name": "버터플라이 숄더백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4008": {
+      "id": 4008,
+      "name": "슬링 드라이 백",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "4009": {
+      "id": 4009,
+      "name": "메탈 케이스",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5000": {
+      "id": 5000,
+      "name": "서벌 금속 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5001": {
+      "id": 5001,
+      "name": "마나슬루 펠트 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5002": {
+      "id": 5002,
+      "name": "앵그리 아델리 원형 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5003": {
+      "id": 5003,
+      "name": "베로니카 자수 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5004": {
+      "id": 5004,
+      "name": "카제야마 벨크로 패치",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5005": {
+      "id": 5005,
+      "name": "코코데빌 실버 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5006": {
+      "id": 5006,
+      "name": "스트릿 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5007": {
+      "id": 5007,
+      "name": "로렐라이 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5008": {
+      "id": 5008,
+      "name": "하르피아 플렉시블 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "5009": {
+      "id": 5009,
+      "name": "코인 배지",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6000": {
+      "id": 6000,
+      "name": "테니스 헤어밴드",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6001": {
+      "id": 6001,
+      "name": "헤어 슈슈",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6002": {
+      "id": 6002,
+      "name": "모모 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6003": {
+      "id": 6003,
+      "name": "날개 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6004": {
+      "id": 6004,
+      "name": "다목적 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6005": {
+      "id": 6005,
+      "name": "박쥐 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6006": {
+      "id": 6006,
+      "name": "캘리그라피 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6007": {
+      "id": 6007,
+      "name": "나뭇잎 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6008": {
+      "id": 6008,
+      "name": "앵커 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "6009": {
+      "id": 6009,
+      "name": "전자파 차단 헤어핀",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7000": {
+      "id": 7000,
+      "name": "교통안전 부적",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7001": {
+      "id": 7001,
+      "name": "발열팩",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7002": {
+      "id": 7002,
+      "name": "페로로의 깃털",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7003": {
+      "id": 7003,
+      "name": "십자가",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7004": {
+      "id": 7004,
+      "name": "카모 달마",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7005": {
+      "id": 7005,
+      "name": "저주 인형",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7006": {
+      "id": 7006,
+      "name": "휴대용 탈취제",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7007": {
+      "id": 7007,
+      "name": "드림캐쳐",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7008": {
+      "id": 7008,
+      "name": "상어 이빨 부적",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "7009": {
+      "id": 7009,
+      "name": "키캡 토이",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8000": {
+      "id": 8000,
+      "name": "방수 디지털 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8001": {
+      "id": 8001,
+      "name": "가죽 손목 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8002": {
+      "id": 8002,
+      "name": "웨이브캣 손목 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8003": {
+      "id": 8003,
+      "name": "앤티크 회중 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8004": {
+      "id": 8004,
+      "name": "방진 손목 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8005": {
+      "id": 8005,
+      "name": "고딕풍 손목 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8006": {
+      "id": 8006,
+      "name": "스트릿 패션 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8007": {
+      "id": 8007,
+      "name": "로렐라이 손목 시계",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8008": {
+      "id": 8008,
+      "name": "다이버 워치",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "8009": {
+      "id": 8009,
+      "name": "스크린 워치",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9000": {
+      "id": 9000,
+      "name": "블루투스 목걸이",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9001": {
+      "id": 9001,
+      "name": "눈꽃 펜던트",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9002": {
+      "id": 9002,
+      "name": "니콜라이 로켓",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9003": {
+      "id": 9003,
+      "name": "십자가 초커",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9004": {
+      "id": 9004,
+      "name": "도그택",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9005": {
+      "id": 9005,
+      "name": "펑크 초커",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9006": {
+      "id": 9006,
+      "name": "체인 목걸이",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9007": {
+      "id": 9007,
+      "name": "그린리프 목걸이",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9008": {
+      "id": 9008,
+      "name": "옥토퍼스 홀더",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "9009": {
+      "id": 9009,
+      "name": "메모리 네클리스",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 0
+    },
+    "101001": {
+      "id": 101001,
+      "name": "니트 털모자 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "101002": {
+      "id": 101002,
+      "name": "빅 브라더 페도라 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "101003": {
+      "id": 101003,
+      "name": "리본 베레모 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "101004": {
+      "id": 101004,
+      "name": "방탄 헬멧 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "101005": {
+      "id": 101005,
+      "name": "프릴 미니 햇 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "101006": {
+      "id": 101006,
+      "name": "버킷 햇 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "101007": {
+      "id": 101007,
+      "name": "리프 리본 페도라 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "101008": {
+      "id": 101008,
+      "name": "세일러 햇 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "101009": {
+      "id": 101009,
+      "name": "게이밍 헬멧 설계도면",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "102001": {
+      "id": 102001,
+      "name": "니트 벙어리 장갑 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "102002": {
+      "id": 102002,
+      "name": "페로로 오븐 장갑 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "102003": {
+      "id": 102003,
+      "name": "가죽 글러브 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "102004": {
+      "id": 102004,
+      "name": "택티컬 글러브 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "102005": {
+      "id": 102005,
+      "name": "레이스 글러브 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "102006": {
+      "id": 102006,
+      "name": "팔 토시 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "102007": {
+      "id": 102007,
+      "name": "진주 털실 장갑 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "102008": {
+      "id": 102008,
+      "name": "세일링 글러브 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "102009": {
+      "id": 102009,
+      "name": "슈퍼 글러브 설계도면",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "103001": {
+      "id": 103001,
+      "name": "어그 부츠 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "103002": {
+      "id": 103002,
+      "name": "핑키파카 슬리퍼 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "103003": {
+      "id": 103003,
+      "name": "앤티크 에나멜 로퍼 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "103004": {
+      "id": 103004,
+      "name": "전술 부츠 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "103005": {
+      "id": 103005,
+      "name": "펌프스 힐 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "103006": {
+      "id": 103006,
+      "name": "캐주얼 스니커즈 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "103007": {
+      "id": 103007,
+      "name": "방수 등산 부츠 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "103008": {
+      "id": 103008,
+      "name": "아쿠아 샌들 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "103009": {
+      "id": 103009,
+      "name": "게이밍 슬리퍼 설계도면",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "104001": {
+      "id": 104001,
+      "name": "방한용 크로스백 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "104002": {
+      "id": 104002,
+      "name": "페로로 백팩 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "104003": {
+      "id": 104003,
+      "name": "감색 스쿨백 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "104004": {
+      "id": 104004,
+      "name": "전술 란도셀 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "104005": {
+      "id": 104005,
+      "name": "데빌 윙 토트백 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "104006": {
+      "id": 104006,
+      "name": "스트릿 백 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "104007": {
+      "id": 104007,
+      "name": "버터플라이 숄더백 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "104008": {
+      "id": 104008,
+      "name": "슬링 드라이 백 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "104009": {
+      "id": 104009,
+      "name": "메탈 케이스 설계도면",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "105001": {
+      "id": 105001,
+      "name": "마나슬루 펠트 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "105002": {
+      "id": 105002,
+      "name": "앵그리 아델리 원형 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "105003": {
+      "id": 105003,
+      "name": "베로니카 자수 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "105004": {
+      "id": 105004,
+      "name": "카제야마 벨크로 패치 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "105005": {
+      "id": 105005,
+      "name": "코코데빌 실버 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "105006": {
+      "id": 105006,
+      "name": "스트릿 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "105007": {
+      "id": 105007,
+      "name": "로렐라이 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "105008": {
+      "id": 105008,
+      "name": "하르피아 플렉시블 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "105009": {
+      "id": 105009,
+      "name": "코인 배지 설계도면",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "106001": {
+      "id": 106001,
+      "name": "헤어 슈슈 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "106002": {
+      "id": 106002,
+      "name": "모모 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "106003": {
+      "id": 106003,
+      "name": "날개 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "106004": {
+      "id": 106004,
+      "name": "다목적 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "106005": {
+      "id": 106005,
+      "name": "박쥐 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "106006": {
+      "id": 106006,
+      "name": "캘리그라피 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "106007": {
+      "id": 106007,
+      "name": "나뭇잎 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "106008": {
+      "id": 106008,
+      "name": "앵커 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "106009": {
+      "id": 106009,
+      "name": "전자파 차단 헤어핀 설계도면",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "107001": {
+      "id": 107001,
+      "name": "발열팩 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "107002": {
+      "id": 107002,
+      "name": "페로로의 깃털 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "107003": {
+      "id": 107003,
+      "name": "십자가 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "107004": {
+      "id": 107004,
+      "name": "카모 달마 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "107005": {
+      "id": 107005,
+      "name": "저주 인형 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "107006": {
+      "id": 107006,
+      "name": "휴대용 탈취제 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "107007": {
+      "id": 107007,
+      "name": "드림캐쳐 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "107008": {
+      "id": 107008,
+      "name": "상어 이빨 부적 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "107009": {
+      "id": 107009,
+      "name": "키캡 토이 설계도면",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "108001": {
+      "id": 108001,
+      "name": "가죽 손목 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "108002": {
+      "id": 108002,
+      "name": "웨이브캣 손목 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "108003": {
+      "id": 108003,
+      "name": "앤티크 회중 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "108004": {
+      "id": 108004,
+      "name": "방진 손목 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "108005": {
+      "id": 108005,
+      "name": "고딕풍 손목 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "108006": {
+      "id": 108006,
+      "name": "스트릿 패션 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "108007": {
+      "id": 108007,
+      "name": "로렐라이 손목 시계 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "108008": {
+      "id": 108008,
+      "name": "다이버 워치 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "108009": {
+      "id": 108009,
+      "name": "스크린 워치 설계도면",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "109001": {
+      "id": 109001,
+      "name": "눈꽃 펜던트 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 15
+    },
+    "109002": {
+      "id": 109002,
+      "name": "니콜라이 로켓 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 25
+    },
+    "109003": {
+      "id": 109003,
+      "name": "십자가 초커 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 50
+    },
+    "109004": {
+      "id": 109004,
+      "name": "도그택 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 75
+    },
+    "109005": {
+      "id": 109005,
+      "name": "펑크 초커 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 100
+    },
+    "109006": {
+      "id": 109006,
+      "name": "체인 목걸이 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 125
+    },
+    "109007": {
+      "id": 109007,
+      "name": "그린리프 목걸이 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 150
+    },
+    "109008": {
+      "id": 109008,
+      "name": "옥토퍼스 홀더 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 175
+    },
+    "109009": {
+      "id": 109009,
+      "name": "메모리 네클리스 설계도면",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 200
+    },
+    "501000": {
+      "id": 501000,
+      "name": "모자 만능 설계도",
+      "category": "Hat",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "502000": {
+      "id": 502000,
+      "name": "장갑 만능 설계도",
+      "category": "Gloves",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "503000": {
+      "id": 503000,
+      "name": "신발 만능 설계도",
+      "category": "Shoes",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "504000": {
+      "id": 504000,
+      "name": "가방 만능 설계도",
+      "category": "Bag",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "505000": {
+      "id": 505000,
+      "name": "배지 만능 설계도",
+      "category": "Badge",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "506000": {
+      "id": 506000,
+      "name": "헤어핀 만능 설계도",
+      "category": "Hairpin",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "507000": {
+      "id": 507000,
+      "name": "부적 만능 설계도",
+      "category": "Charm",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "508000": {
+      "id": 508000,
+      "name": "손목시계 만능 설계도",
+      "category": "Watch",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    },
+    "509000": {
+      "id": 509000,
+      "name": "목걸이 만능 설계도",
+      "category": "Necklace",
+      "rarity": "N",
+      "level_up_feed_exp": 1
+    }
+  }
+}
