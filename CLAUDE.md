@@ -22,7 +22,12 @@
 4. UI Design (화면 설계)
 5. Conceptual Design (ERD - Crow's Feet 방식)
 6. Logical Design (DuckDB 스키마 SQL)
-7. Sequence Diagram
+7. Sequence Diagram — Use Case와 1:1 대응
+   - 7.1 (3.1) 학생 목록 조회 및 필터링
+   - 7.2 (3.1.1) 학생 상세 정보 및 스킬 조회
+   - 7.3 (3.2 / 3.2.1) 가챠 뽑기 실행 및 결과 저장
+   - 7.4 (3.3) 보유 학생 현황 조회
+   - 7.5 (3.3.1 / 3.3.2) 육성 목표 설정 및 비용 계산
 8. 설계 구성 요소 및 제한 요소 충족 여부
 9. 결론 및 자체 평가
 
