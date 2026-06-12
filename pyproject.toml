@@ -1,0 +1,17 @@
+[project]
+name = "blueachive-simulator"
+version = "0.1.0"
+description = "블루아카이브 가챠 & 육성 시뮬레이터"
+requires-python = ">=3.11"
+dependencies = [
+    "flet>=0.85.0",
+    "duckdb>=1.5.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=3.0.3",
+]
+
+[tool.uv]
+dev-dependencies = []
+
+[dependency-groups]
+dev = []
