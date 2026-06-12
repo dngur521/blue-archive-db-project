@@ -1,9 +1,14 @@
 # macOS
 .DS_Store
 
-# 교수 제공 샘플/양식 파일
-설계서샘플-데이터베이스.pdf
-설계서양식*.pdf
-설계서양식*.hwp
+*.txt
+*.pdf
+*.hwp
 
-123.txt
+*.env
+
+*.png
+
+__pycache__
+
+*.db
