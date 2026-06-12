@@ -55,13 +55,10 @@ class DuckDBBannerRepository(IBannerRepository):
             """, [sid])
 
     def find_all_active(self) -> pd.DataFrame:
-        """
-        활성 배너 목록 조회 (is_active = TRUE)
-        - 픽업 학생 이름도 JOIN해서 반환
-        """
+        """활성 배너 목록 조회 (픽업 학생 이름·성급 포함)"""
         return self._con.execute("""
             SELECT b.id, b.pickup_student_id, s.full_name AS pickup_name,
-                   b.is_active, b.claimed_count
+                   s.star_grade, b.is_active, b.claimed_count
             FROM banner b
             JOIN student s ON s.id = b.pickup_student_id
             WHERE b.is_active = TRUE
@@ -69,10 +66,10 @@ class DuckDBBannerRepository(IBannerRepository):
         """).df()
 
     def find_by_id(self, banner_id: int) -> Optional[pd.Series]:
-        """배너 ID로 단일 배너 조회 (픽업 학생 이름 포함)"""
+        """배너 ID로 단일 배너 조회 (픽업 학생 이름·성급 포함)"""
         df = self._con.execute("""
             SELECT b.id, b.pickup_student_id, s.full_name AS pickup_name,
-                   b.is_active, b.claimed_count
+                   s.star_grade, b.is_active, b.claimed_count
             FROM banner b
             JOIN student s ON s.id = b.pickup_student_id
             WHERE b.id = ?
@@ -80,11 +77,15 @@ class DuckDBBannerRepository(IBannerRepository):
         return df.iloc[0] if not df.empty else None
 
     def increment_claimed(self, banner_id: int) -> None:
-        """
-        픽업 확정 수령 시 claimed_count 1 증가
-        - 200회 모집 달성 후 픽업 학생 수령 버튼 클릭 시 호출
-        """
+        """픽업 확정 수령 시 claimed_count 1 증가"""
         self._con.execute(
             "UPDATE banner SET claimed_count = claimed_count + 1 WHERE id = ?",
+            [banner_id]
+        )
+
+    def reset_claimed(self, banner_id: int) -> None:
+        """뽑기 초기화 시 claimed_count를 0으로 리셋"""
+        self._con.execute(
+            "UPDATE banner SET claimed_count = 0 WHERE id = ?",
             [banner_id]
         )

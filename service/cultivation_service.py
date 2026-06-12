@@ -87,6 +87,11 @@ class CultivationService:
         """
         return self._query_repo.get_owned_students()
 
+    def reset_all_owned(self) -> None:
+        """보유 학생 전체 초기화 (cultivation + cultivation_goal 전체 삭제)"""
+        self._goal_repo.delete_all()
+        self._cultivation_repo.delete_all()
+
     def get_cultivation(self, student_id: int) -> Optional[pd.Series]:
         """현재 육성 현황 조회"""
         return self._cultivation_repo.find_by_student(student_id)
@@ -167,11 +172,13 @@ class CultivationService:
             for i in range(cur_ex - 1, min(goal_ex - 1, len(ex_credits))):
                 summary.skill_credits += ex_credits[i]
 
-        # 학생별 스킬 재료 계산
+        # 학생별 스킬 재료 계산 (기본/강화/서브 + EX)
         summary.skill_items = self._calc_skill_items(
             student_id,
-            current.get("normal_skill", 1), goal.get("normal_skill", 1),
-            current.get("ex_skill", 1), goal.get("ex_skill", 1),
+            current.get("normal_skill",  1), goal.get("normal_skill",  1),
+            current.get("enhance_skill", 1), goal.get("enhance_skill", 1),
+            current.get("sub_skill",     1), goal.get("sub_skill",     1),
+            current.get("ex_skill",      1), goal.get("ex_skill",      1),
         )
 
         summary.credit += summary.skill_credits
@@ -208,35 +215,39 @@ class CultivationService:
     def _calc_skill_items(
         self,
         student_id: int,
-        cur_normal: int, goal_normal: int,
-        cur_ex: int, goal_ex: int,
+        cur_normal: int,  goal_normal: int,
+        cur_enhance: int, goal_enhance: int,
+        cur_sub: int,     goal_sub: int,
+        cur_ex: int,      goal_ex: int,
     ) -> dict:
         """
         학생별 스킬 강화 재료 계산
-        - students.json의 skill_upgrade_cost, ex_upgrade_cost 사용
-        - 아이템 ID → 이름은 items.json에서 조회
+        - 기본/강화/서브 스킬: skill_upgrade_cost (같은 재료 테이블 공유)
+        - EX 스킬: ex_upgrade_cost
         """
-        # 학생 데이터 찾기
         student_data = next(
             (s for s in self._students_data if s["id"] == student_id), None
         )
         if student_data is None:
             return {}
 
-        # items.json 로드 (아이템 이름 조회용)
         items = self._load_items()
-
         item_totals: dict[str, int] = {}
 
-        # 일반 스킬 재료 (skill_upgrade_cost)
+        # 기본/강화/서브 스킬 재료 (동일 테이블)
         skill_cost_table = student_data.get("skill_upgrade_cost", [])
-        for level_idx in range(cur_normal - 1, min(goal_normal - 1, len(skill_cost_table))):
-            for item in skill_cost_table[level_idx]:
-                item_id = str(item["item_id"])
-                item_name = items.get(item_id, {}).get("name", f"아이템{item_id}")
-                item_totals[item_name] = item_totals.get(item_name, 0) + item["amount"]
+        for cur_lv, goal_lv in [
+            (cur_normal,  goal_normal),
+            (cur_enhance, goal_enhance),
+            (cur_sub,     goal_sub),
+        ]:
+            for level_idx in range(cur_lv - 1, min(goal_lv - 1, len(skill_cost_table))):
+                for item in skill_cost_table[level_idx]:
+                    item_id = str(item["item_id"])
+                    item_name = items.get(item_id, {}).get("name", f"아이템{item_id}")
+                    item_totals[item_name] = item_totals.get(item_name, 0) + item["amount"]
 
-        # EX 스킬 재료 (ex_upgrade_cost)
+        # EX 스킬 재료
         ex_cost_table = student_data.get("ex_upgrade_cost", [])
         for level_idx in range(cur_ex - 1, min(goal_ex - 1, len(ex_cost_table))):
             for item in ex_cost_table[level_idx]:

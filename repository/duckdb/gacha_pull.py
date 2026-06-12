@@ -63,6 +63,13 @@ class DuckDBGachaPullRepository(IGachaPullRepository):
         ).fetchone()
         return result[0] if result else 0
 
+    def delete_by_banner(self, banner_id: int) -> None:
+        """해당 배너의 뽑기 기록 전체 삭제 (초기화)"""
+        self._con.execute(
+            "DELETE FROM gacha_pull WHERE banner_id = ?",
+            [banner_id]
+        )
+
     def find_recent(self, banner_id: int, limit: int = 10) -> pd.DataFrame:
         """
         최근 뽑기 기록 조회 (가챠 결과 표시용)

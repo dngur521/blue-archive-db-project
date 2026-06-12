@@ -40,14 +40,15 @@ class DuckDBQueryRepository(IQueryRepository):
         """
         return self._con.execute("""
             SELECT
-                s.id, s.full_name, s.star_grade, s.school,
+                s.id, s.full_name, s.star_grade, s.school, s.club,
                 s.tactic_role, s.position, s.bullet_type,
                 s.armor_type, s.weapon_type_code,
                 s.terrain_street, s.terrain_outdoor, s.terrain_indoor,
                 s.weapon_name, s.weapon_desc,
                 s.gear_name, s.gear_desc,
                 s.school_year, s.voice, s.birthday, s.age, s.height, s.hobby,
-                sk.skill_type, sk.skill_name, sk.skill_desc, sk.skill_icon
+                sk.skill_type, sk.skill_name, sk.skill_desc, sk.skill_icon,
+                sk.params_lv1, sk.params_max
             FROM student s
             JOIN skill sk ON sk.student_id = s.id
             WHERE s.id = ?

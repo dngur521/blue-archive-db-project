@@ -41,6 +41,8 @@ class DuckDBSkillRepository(ISkillRepository):
                 skill_name  VARCHAR,
                 skill_desc  TEXT,
                 skill_icon  VARCHAR,
+                params_lv1  TEXT,  -- JSON 배열: [<?1>_Lv1, <?2>_Lv1, ...] 수치
+                params_max  TEXT,  -- JSON 배열: [<?1>_MAX, <?2>_MAX, ...] 수치
                 UNIQUE (student_id, skill_type)
             )
         """)
@@ -58,8 +60,8 @@ class DuckDBSkillRepository(ISkillRepository):
         """
         for skill in skills:
             self._con.execute("""
-                INSERT INTO skill (student_id, skill_type, skill_name, skill_desc, skill_icon)
-                VALUES (?, ?, ?, ?, ?)
+                INSERT INTO skill (student_id, skill_type, skill_name, skill_desc, skill_icon, params_lv1, params_max)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT (student_id, skill_type) DO NOTHING
             """, [
                 student_id,
@@ -67,6 +69,8 @@ class DuckDBSkillRepository(ISkillRepository):
                 skill.get("skill_name"),
                 skill.get("skill_desc"),
                 skill.get("skill_icon"),
+                skill.get("params_lv1"),  # JSON 텍스트
+                skill.get("params_max"),  # JSON 텍스트
             ])
 
     def find_by_student(self, student_id: int) -> pd.DataFrame:

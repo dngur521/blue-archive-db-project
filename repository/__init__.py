@@ -27,6 +27,7 @@ if DB_TYPE == "DUCKDB":
     from .duckdb.student import DuckDBStudentRepository as StudentRepository
     from .duckdb.skill import DuckDBSkillRepository as SkillRepository
     from .duckdb.student_image import DuckDBStudentImageRepository as StudentImageRepository
+    from .duckdb.student_stat import DuckDBStudentStatRepository as StudentStatRepository
     from .duckdb.banner import DuckDBBannerRepository as BannerRepository
     from .duckdb.gacha_pull import DuckDBGachaPullRepository as GachaPullRepository
     from .duckdb.cultivation import DuckDBCultivationRepository as CultivationRepository
@@ -45,6 +46,7 @@ __all__ = [
     "StudentRepository",
     "SkillRepository",
     "StudentImageRepository",
+    "StudentStatRepository",
     "BannerRepository",
     "GachaPullRepository",
     "CultivationRepository",

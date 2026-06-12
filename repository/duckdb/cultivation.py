@@ -110,3 +110,7 @@ class DuckDBCultivationRepository(ICultivationRepository):
             [student_id]
         ).fetchone()
         return result[0] > 0 if result else False
+
+    def delete_all(self) -> None:
+        """보유 학생 전체 삭제 (초기화)"""
+        self._con.execute("DELETE FROM cultivation")

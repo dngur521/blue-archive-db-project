@@ -9,7 +9,7 @@ main.py
       ↓ 인터페이스 (DIP)
   Repository Layer (repository/)
       ↓
-  DuckDB (data/blueachive.db)
+  DuckDB (data/bluearchive.db)
 
 실행 방법:
   uv run flet run main.py
@@ -21,6 +21,7 @@ import flet as ft
 
 # 의존성 주입: DB_TYPE에 따른 구현체 자동 선택 (.env 기반)
 from repository import (
+    StudentStatRepository,
     DatabaseManager,
     StudentRepository,
     SkillRepository,
@@ -48,7 +49,7 @@ def main(page: ft.Page) -> None:
     Flet 앱 메인 함수 (Controller 역할)
     - 페이지 기본 설정
     - 의존성 주입 및 서비스 초기화
-    - 탭 기반 3-화면 레이아웃 구성
+    - NavigationBar + 탭 콘텐츠 기반 3-화면 레이아웃
     """
 
     # ── 페이지 기본 설정 ─────────────────────────────────────────────────────
@@ -78,6 +79,7 @@ def main(page: ft.Page) -> None:
     student_repo   = StudentRepository(db_manager)
     skill_repo     = SkillRepository(db_manager)
     image_repo     = StudentImageRepository(db_manager)
+    stat_repo      = StudentStatRepository(db_manager)
     banner_repo    = BannerRepository(db_manager)
     gacha_repo     = GachaPullRepository(db_manager)
     cultiv_repo    = CultivationRepository(db_manager)
@@ -89,6 +91,7 @@ def main(page: ft.Page) -> None:
         student_repo=student_repo,
         skill_repo=skill_repo,
         image_repo=image_repo,
+        stat_repo=stat_repo,
         query_repo=query_repo,
     )
     gacha_service = GachaService(
@@ -108,58 +111,60 @@ def main(page: ft.Page) -> None:
     gacha_service.initialize()        # banner, gacha_pull 테이블 + 배너 자동 생성
     cultivation_service.initialize()  # cultivation, cultivation_goal 테이블
 
-    # ── 뷰 빌더 생성 ────────────────────────────────────────────────────────
-    # 각 탭의 build 함수를 호출 (page 객체 필요해서 여기서 실행)
+    # ── 뷰 빌더 생성 (page 객체 전달) ────────────────────────────────────────
     student_build   = create_student_view(student_service)
     gacha_build     = create_gacha_view(gacha_service)
     cultiv_build    = create_cultivation_view(cultivation_service)
 
-    # 실제 컨트롤 생성
+    # 컨트롤 생성 (페이지에 추가 전이므로 .update() 호출 없음)
     student_content   = student_build(page)
     gacha_content     = gacha_build(page)
     cultiv_content    = cultiv_build(page)
 
-    # ── 탭 기반 레이아웃 ────────────────────────────────────────────────────
-    tabs = ft.Tabs(
-        selected_index=0,
-        animation_duration=200,
-        expand=True,
-        tabs=[
-            ft.Tab(
-                text="학생 도감",
-                icon=ft.icons.MENU_BOOK,
-                content=ft.Container(
-                    content=student_content,
-                    padding=ft.padding.only(top=8),
-                    expand=True,
-                ),
+    # ── NavigationBar + 콘텐츠 스와핑 방식 (Flet 0.85 호환) ─────────────────
+    contents = [
+        ft.Container(content=student_content, expand=True, padding=ft.Padding(top=8)),
+        ft.Container(content=gacha_content,   expand=True, padding=ft.Padding(top=8)),
+        ft.Container(content=cultiv_content,  expand=True, padding=ft.Padding(top=8)),
+    ]
+
+    # 콘텐츠 영역 (현재 탭 내용 표시)
+    content_area = ft.Container(content=contents[0], expand=True)
+
+    def on_nav_change(e) -> None:
+        """NavigationBar 탭 변경 시 콘텐츠 교체"""
+        idx = e.control.selected_index
+        content_area.content = contents[idx]
+        page.update()
+
+    # NavigationBar 설정
+    page.navigation_bar = ft.NavigationBar(
+        destinations=[
+            ft.NavigationBarDestination(
+                label="학생 도감",
+                icon=ft.Icons.MENU_BOOK_OUTLINED,
+                selected_icon=ft.Icons.MENU_BOOK,
             ),
-            ft.Tab(
-                text="가챠 시뮬레이터",
-                icon=ft.icons.CASINO,
-                content=ft.Container(
-                    content=gacha_content,
-                    padding=ft.padding.only(top=8),
-                    expand=True,
-                ),
+            ft.NavigationBarDestination(
+                label="가챠 시뮬",
+                icon=ft.Icons.CASINO_OUTLINED,
+                selected_icon=ft.Icons.CASINO,
             ),
-            ft.Tab(
-                text="육성 시뮬레이터",
-                icon=ft.icons.FITNESS_CENTER,
-                content=ft.Container(
-                    content=cultiv_content,
-                    padding=ft.padding.only(top=8),
-                    expand=True,
-                ),
+            ft.NavigationBarDestination(
+                label="육성 시뮬",
+                icon=ft.Icons.FITNESS_CENTER_OUTLINED,
+                selected_icon=ft.Icons.FITNESS_CENTER,
             ),
         ],
+        selected_index=0,
+        on_change=on_nav_change,
     )
 
     # 로딩 화면 제거 후 메인 UI 표시
     page.controls.clear()
-    page.add(tabs)
+    page.add(content_area)
     page.update()
 
 
-# 앱 실행 진입점
-ft.app(target=main)
+# 앱 실행 진입점 (Flet 0.80+: ft.run() 사용)
+ft.run(main)

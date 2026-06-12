@@ -163,6 +163,11 @@ class IBannerRepository(IRepository):
         """픽업 확정 수령 시 claimed_count 증가"""
         ...
 
+    @abstractmethod
+    def reset_claimed(self, banner_id: int) -> None:
+        """뽑기 초기화 시 claimed_count를 0으로 리셋"""
+        ...
+
 
 # =============================================================================
 # 가챠 뽑기 기록(gacha_pull) 테이블 인터페이스
@@ -184,6 +189,11 @@ class IGachaPullRepository(IRepository):
     @abstractmethod
     def find_recent(self, banner_id: int, limit: int = 10) -> pd.DataFrame:
         """최근 뽑기 기록 조회"""
+        ...
+
+    @abstractmethod
+    def delete_by_banner(self, banner_id: int) -> None:
+        """해당 배너의 뽑기 기록 전체 삭제"""
         ...
 
 
@@ -219,6 +229,11 @@ class ICultivationRepository(IRepository):
         """보유 여부 확인"""
         ...
 
+    @abstractmethod
+    def delete_all(self) -> None:
+        """보유 학생 전체 삭제 (초기화)"""
+        ...
+
 
 # =============================================================================
 # 목표 육성 현황(cultivation_goal) 테이블 인터페이스
@@ -235,6 +250,11 @@ class ICultivationGoalRepository(IRepository):
     @abstractmethod
     def find_by_student(self, student_id: int) -> Optional[pd.Series]:
         """학생 ID로 목표 육성 현황 조회 (미설정이면 None)"""
+        ...
+
+    @abstractmethod
+    def delete_all(self) -> None:
+        """목표 육성 수치 전체 삭제 (초기화)"""
         ...
 
 
@@ -285,4 +305,22 @@ class IQueryRepository(ABC):
         student LEFT JOIN student_image (icon)
         학생 도감 목록 + 아이콘 URL
         """
+        ...
+
+
+# =============================================================================
+# 학생 능력치(student_stat) 테이블 인터페이스
+# =============================================================================
+
+class IStudentStatRepository(IRepository):
+    """학생 능력치 테이블 접근 인터페이스 (Lv.1 / MAX 스탯)"""
+
+    @abstractmethod
+    def bulk_insert(self, stats: list[dict]) -> None:
+        """학생 스탯 데이터 일괄 삽입"""
+        ...
+
+    @abstractmethod
+    def find_by_student(self, student_id: int) -> Optional[pd.Series]:
+        """학생 ID로 능력치 조회"""
         ...

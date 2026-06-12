@@ -1,5 +1,5 @@
 [project]
-name = "blueachive-simulator"
+name = "bluearchive-simulator"
 version = "0.1.0"
 description = "블루아카이브 가챠 & 육성 시뮬레이터"
 requires-python = ">=3.11"

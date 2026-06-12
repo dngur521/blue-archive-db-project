@@ -131,16 +131,9 @@ class GachaService:
     def pull(self, banner_id: int, count: int = 1) -> list[PullResult]:
         """
         가챠 뽑기 실행 (1회 또는 10회)
-        - 각 결과를 DB에 저장
-        - 신규 학생이면 cultivation 레코드 생성
-        - 중복 학생이면 엘레프 지급
-
-        Args:
-            banner_id: 뽑기를 실행할 배너 ID
-            count: 뽑기 횟수 (1 또는 10)
-
-        Returns:
-            list[PullResult]: 뽑기 결과 목록
+        - 확률: 매 뽑기 고정 (소프트 파티 없음)
+        - 10연 보장: 10회차에 2성 이상 확정
+        - 200회 천장: 픽업 학생 확정
         """
         banner = self._banner_repo.find_by_id(banner_id)
         if banner is None:
@@ -148,24 +141,20 @@ class GachaService:
 
         pickup_id = int(banner["pickup_student_id"])
         current_count = self.get_current_pull_count(banner_id)
+
         results = []
-
         for i in range(count):
-            # 이번 뽑기의 사이클 내 순번
             pull_num = current_count + i + 1
-
-            # 10회 뽑기에서 마지막 회차: 2성 이상 보장
             is_tenth = (pull_num % 10 == 0)
 
-            # 가챠 알고리즘으로 학생 ID 결정
-            student_id = self._gacha_algorithm(
-                pull_num, pickup_id, is_tenth
-            )
+            # 200회 천장: 픽업 확정
+            if pull_num == 200:
+                student_id = pickup_id
+            else:
+                student_id = self._gacha_algorithm(pickup_id, is_tenth)
 
-            # DB에 저장
             self._gacha_repo.insert(banner_id, student_id, pull_num)
 
-            # 학생 정보 조회
             student = self._student_repo.find_by_id(student_id)
             if student is None:
                 continue
@@ -175,19 +164,13 @@ class GachaService:
             eleph_gained = 0
 
             if is_new:
-                # 신규 획득: cultivation 레코드 생성
                 self._cultivation_repo.insert_on_acquire(student_id)
-
-                # 3성 학생은 처음 획득 시 엘레프 100개 자동 지급 → 4성 시작
                 if int(student["star_grade"]) == 3:
                     self._cultivation_repo.update_current(
-                        student_id,
-                        star=4,
-                        eleph_count=100,
+                        student_id, star=4, eleph_count=100,
                     )
                     eleph_gained = 100
             else:
-                # 중복 획득: 엘레프 지급
                 eleph_gained = 100 if is_pickup else 30
                 self._cultivation_repo.update_eleph(student_id, eleph_gained)
 
@@ -202,62 +185,55 @@ class GachaService:
 
         return results
 
-    def _gacha_algorithm(
-        self, pull_num: int, pickup_id: int, guarantee_2star: bool
-    ) -> int:
+    def _gacha_algorithm(self, pickup_id: int, guarantee_2star: bool) -> int:
         """
-        가챠 알고리즘 구현
-        - 200회 하드 파티: 픽업 학생 확정
-        - 소프트 파티 (73회~): 회당 3% 추가
-        - 3성 뽑히면 0.7%는 픽업, 나머지는 일반 3성 풀에서 랜덤
-        - guarantee_2star: 10회 보장 (2성 이상)
+        가챠 알고리즘 — 소프트 파티 없음, 매 뽑기 확률 고정
+
+        공식 확률 (Nexon 확률표 기준):
+          픽업 3성:    0.7%       (1명 × 0.700000%)
+          비픽업 3성:  캐릭터 수 × 0.022772% (풀 크기에 따라 동적 계산)
+          2성:         캐릭터 수 × 0.804348%
+          1성:         나머지
+          ※ 10회차: 2성 이상 확정 (guarantee_2star=True)
+          ※ 200회차: 픽업 확정 (pull()에서 직접 처리)
         """
-        base_rates = self._gacha_config.get("base_rates", {"3성": 3.0})
-        pity = self._gacha_config.get("pity", {
-            "hard_pity": 200,
-            "soft_pity_start": 73,
-            "soft_pity_add_per_pull": 3.0,
-        })
-        pickup_rate = self._gacha_config.get("pickup_rate", 0.7)
+        PICKUP_RATE          = 0.7
+        PER_NONPICKUP_3STAR  = 0.022772  # 비픽업 3성 1명당 확률 (Nexon 확률표)
+        PER_2STAR            = 0.804348  # 2성 1명당 확률 (Nexon 확률표)
 
-        hard_pity = pity.get("hard_pity", 200)
-        soft_start = pity.get("soft_pity_start", 73)
-        soft_add = pity.get("soft_pity_add_per_pull", 3.0)
+        pool_3 = self._pool_ids.get("3성", [])
+        pool_2 = self._pool_ids.get("2성", [])
+        nonpickup_count = max(len(pool_3) - 1, 0)  # 픽업 1명 제외
 
-        # 200회 하드 파티: 픽업 확정
-        if pull_num % hard_pity == 0 and pull_num > 0:
-            return pickup_id
-
-        # 소프트 파티 계산
-        base_3star = base_rates.get("3성", 3.0)
-        base_2star = base_rates.get("2성", 18.5)
-
-        if pull_num >= soft_start:
-            extra = (pull_num - soft_start + 1) * soft_add
-            rate_3star = min(base_3star + extra, 100.0)
-        else:
-            rate_3star = base_3star
+        NONPICKUP_3STAR_RATE = nonpickup_count * PER_NONPICKUP_3STAR
+        BASE_2STAR           = len(pool_2) * PER_2STAR
 
         roll = random.uniform(0, 100)
 
-        if roll < rate_3star:
-            # ─── 3성 획득 ───
-            # 픽업 확률: pickup_rate / rate_3star 비율
-            if random.uniform(0, 100) < (pickup_rate / rate_3star * 100):
-                return pickup_id
-            else:
-                pool = self._pool_ids.get("3성", [])
-                return random.choice(pool) if pool else pickup_id
-
-        elif roll < rate_3star + base_2star or guarantee_2star:
-            # ─── 2성 획득 (또는 10회 보장) ───
+        if roll < PICKUP_RATE:
+            return pickup_id
+        elif roll < PICKUP_RATE + NONPICKUP_3STAR_RATE:
+            pool = self._pool_ids.get("3성", [])
+            return random.choice(pool) if pool else pickup_id
+        elif roll < PICKUP_RATE + NONPICKUP_3STAR_RATE + BASE_2STAR or guarantee_2star:
             pool = self._pool_ids.get("2성", [])
             return random.choice(pool) if pool else pickup_id
-
         else:
-            # ─── 1성 획득 ───
             pool = self._pool_ids.get("1성", [])
             return random.choice(pool) if pool else pickup_id
+
+    # -------------------------------------------------------------------------
+    # 뽑기 초기화
+    # -------------------------------------------------------------------------
+
+    def reset_banner(self, banner_id: int) -> None:
+        """
+        해당 배너의 뽑기 기록 전체 초기화
+        - gacha_pull 레코드 전체 삭제
+        - banner.claimed_count 0으로 리셋
+        """
+        self._gacha_repo.delete_by_banner(banner_id)
+        self._banner_repo.reset_claimed(banner_id)
 
     # -------------------------------------------------------------------------
     # 픽업 확정 수령

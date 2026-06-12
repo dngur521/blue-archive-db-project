@@ -82,3 +82,7 @@ class DuckDBCultivationGoalRepository(ICultivationGoalRepository):
             [student_id]
         ).df()
         return df.iloc[0] if not df.empty else None
+
+    def delete_all(self) -> None:
+        """목표 육성 수치 전체 삭제 (초기화)"""
+        self._con.execute("DELETE FROM cultivation_goal")

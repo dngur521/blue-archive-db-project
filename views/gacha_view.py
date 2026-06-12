@@ -14,20 +14,21 @@ Use Case 3.2.1: 가챠 결과 저장
 """
 
 import flet as ft
+
 from service.gacha_service import GachaService, PullResult
 
 # 성급별 배경색
 STAR_COLORS = {
-    3: ft.colors.AMBER_100,
-    2: ft.colors.ORANGE_100,
-    1: ft.colors.GREY_100,
+    3: ft.Colors.AMBER_100,
+    2: ft.Colors.ORANGE_100,
+    1: ft.Colors.GREY_100,
 }
 
 # 성급별 텍스트 색상
 STAR_TEXT_COLORS = {
-    3: ft.colors.AMBER_900,
-    2: ft.colors.ORANGE_900,
-    1: ft.colors.GREY_700,
+    3: ft.Colors.AMBER_900,
+    2: ft.Colors.ORANGE_900,
+    1: ft.Colors.GREY_700,
 }
 
 
@@ -40,50 +41,70 @@ def create_gacha_view(service: GachaService) -> callable:
         if banners_df.empty:
             return ft.Column([ft.Text("배너 정보 없음. 앱을 재시작하세요.")])
 
-        # 배너 ID → 이름 매핑
+        # 배너 ID → (이름, student_id, star_grade) 매핑
         banner_map = {
-            int(row["id"]): str(row["pickup_name"])
+            int(row["id"]): str(row["pickup_name"]) for _, row in banners_df.iterrows()
+        }
+        banner_info = {
+            int(row["id"]): {
+                "name":       str(row["pickup_name"]),
+                "student_id": int(row["pickup_student_id"]),
+                "star_grade": int(row["star_grade"]),
+            }
             for _, row in banners_df.iterrows()
         }
         first_banner_id = int(banners_df.iloc[0]["id"])
 
         # ── 상태 ────────────────────────────────────────────────────────────
-        state = {"banner_id": first_banner_id}
+        state = {"banner_id": first_banner_id, "search": ""}
+        # 전체 배너 옵션 (검색 필터링용)
+        all_options = [
+            ft.dropdown.Option(key=str(bid), text=name)
+            for bid, name in banner_map.items()
+        ]
 
         # ── 컨트롤 ──────────────────────────────────────────────────────────
+        # 픽업 학생 이름 검색
+        banner_search = ft.TextField(
+            hint_text="픽업 학생 이름 검색...",
+            expand=True,
+            height=40,
+            content_padding=ft.Padding(left=10, right=10, top=4, bottom=4),
+        )
+
         # 배너 드롭다운
         banner_dropdown = ft.Dropdown(
-            label="배너 선택",
-            options=[
-                ft.dropdown.Option(key=str(bid), text=name)
-                for bid, name in banner_map.items()
-            ],
+            label="배너 선택 (검색 후 선택)",
+            options=all_options,
             value=str(first_banner_id),
-            width=280,
+            width=350,
         )
 
         # 진행도 바
         progress_bar = ft.ProgressBar(
             value=0,
             width=400,
-            color=ft.colors.BLUE_400,
-            bgcolor=ft.colors.GREY_200,
+            color=ft.Colors.BLUE_400,
+            bgcolor=ft.Colors.GREY_200,
         )
         progress_text = ft.Text("0 / 200", size=14)
 
         # 통계 텍스트
         stat_total = ft.Text("총 뽑기: 0회", size=13)
         stat_star3 = ft.Text("3성 획득: 0명", size=13)
-        stat_to_pity = ft.Text("파티까지: 200회", size=13, color=ft.colors.BLUE_700)
+        stat_to_pity = ft.Text("천장까지: 200회", size=13, color=ft.Colors.BLUE_700)
 
         # 픽업 확정 수령 버튼 (200회 달성 시 활성화)
         claim_btn = ft.ElevatedButton(
-            text="픽업 학생 확정 수령",
-            icon=ft.icons.STAR,
-            bgcolor=ft.colors.AMBER_600,
-            color=ft.colors.WHITE,
+            "픽업 학생 확정 수령",
+            icon=ft.Icons.STAR,
+            bgcolor=ft.Colors.AMBER_600,
+            color=ft.Colors.WHITE,
             disabled=True,
         )
+
+        # 픽업 학생 카드 (진행도 카드 우측)
+        pickup_card = ft.Container(width=90)
 
         # 최근 뽑기 결과 목록
         result_list = ft.ListView(
@@ -94,6 +115,55 @@ def create_gacha_view(service: GachaService) -> callable:
 
         # ── 상태 갱신 함수 ───────────────────────────────────────────────────
 
+        def refresh_pickup_card() -> None:
+            """진행도 카드 우측 픽업 학생 사진·성급 갱신"""
+            info = banner_info.get(state["banner_id"])
+            if not info:
+                pickup_card.content = None
+                try: pickup_card.update()
+                except RuntimeError: pass
+                return
+
+            sid   = info["student_id"]
+            star  = info["star_grade"]
+            name  = info["name"]
+            icon_url = f"https://schaledb.com/images/student/icon/{sid}.webp"
+            star_color = STAR_TEXT_COLORS.get(star, ft.Colors.GREY_700)
+
+            pickup_card.content = ft.Column(
+                [
+                    ft.Container(
+                        content=ft.Image(
+                            src=icon_url,
+                            width=72, height=72,
+                            fit="cover",
+                            border_radius=8,
+                            error_content=ft.Icon(ft.Icons.PERSON, size=32),
+                        ),
+                        border=ft.Border.all(2, ft.Colors.AMBER_400),
+                        border_radius=8,
+                    ),
+                    ft.Text(
+                        name,
+                        size=10,
+                        text_align=ft.TextAlign.CENTER,
+                        max_lines=2,
+                        overflow=ft.TextOverflow.ELLIPSIS,
+                        width=80,
+                    ),
+                    ft.Text(
+                        "★" * star,
+                        size=11,
+                        color=star_color,
+                        text_align=ft.TextAlign.CENTER,
+                    ),
+                ],
+                spacing=4,
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            )
+            try: pickup_card.update()
+            except RuntimeError: pass
+
         def refresh_stats() -> None:
             """통계 및 진행도 바 갱신"""
             bid = state["banner_id"]
@@ -102,31 +172,115 @@ def create_gacha_view(service: GachaService) -> callable:
             star3 = stats["star3_count"]
             current = stats["current_pull_count"]
 
+            remaining = max(0, 200 - current)
             stat_total.value = f"총 뽑기: {total}회"
             stat_star3.value = f"3성 획득: {star3}명"
-            stat_to_pity.value = f"파티까지: {200 - current}회"
+            stat_to_pity.value = f"천장까지: {remaining}회"
             progress_bar.value = min(current / 200, 1.0)
-            progress_text.value = f"{current} / 200"
-            claim_btn.disabled = (current < 200)
+            progress_text.value = f"{min(current, 200)} / 200"
+            claim_btn.disabled = current < 200
 
-            stat_total.update()
-            stat_star3.update()
-            stat_to_pity.update()
-            progress_bar.update()
-            progress_text.update()
-            claim_btn.update()
+            try:
+                stat_total.update()
+            except RuntimeError:
+                pass
+            try:
+                stat_star3.update()
+            except RuntimeError:
+                pass
+            try:
+                stat_to_pity.update()
+            except RuntimeError:
+                pass
+            try:
+                progress_bar.update()
+            except RuntimeError:
+                pass
+            try:
+                progress_text.update()
+            except RuntimeError:
+                pass
+            try:
+                claim_btn.update()
+            except RuntimeError:
+                pass
+
+        def _make_pull_grid(results: list[PullResult]) -> ft.Control:
+            """뽑기 결과 5×N 이미지 그리드"""
+            cards = []
+            for r in results:
+                icon_url = f"https://schaledb.com/images/student/icon/{r.student_id}.webp"
+                bg = STAR_COLORS.get(r.star_grade, ft.Colors.GREY_100)
+                border = (
+                    ft.Border.all(2, ft.Colors.AMBER_400)
+                    if r.star_grade == 3
+                    else ft.Border.all(1, ft.Colors.GREY_300)
+                )
+                badges = []
+                if r.is_pickup:
+                    badges.append("🎯")
+                if r.is_new:
+                    badges.append("NEW")
+                badge_str = " ".join(badges)
+
+                card = ft.Container(
+                    content=ft.Column(
+                        [
+                            ft.Image(
+                                src=icon_url,
+                                width=58, height=58,
+                                fit="cover",
+                                border_radius=6,
+                                error_content=ft.Icon(ft.Icons.PERSON, size=28),
+                            ),
+                            ft.Text(
+                                r.student_name,
+                                size=9,
+                                text_align=ft.TextAlign.CENTER,
+                                max_lines=2,
+                                overflow=ft.TextOverflow.ELLIPSIS,
+                            ),
+                            ft.Text(
+                                "★" * r.star_grade
+                                + (f"\n{badge_str}" if badge_str else ""),
+                                size=9,
+                                color=STAR_TEXT_COLORS.get(r.star_grade, ft.Colors.BLACK),
+                                text_align=ft.TextAlign.CENTER,
+                            ),
+                        ],
+                        spacing=2,
+                        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+                    ),
+                    width=74, height=108,
+                    bgcolor=bg,
+                    border=border,
+                    border_radius=8,
+                    padding=4,
+                )
+                cards.append(card)
+
+            rows = []
+            for i in range(0, len(cards), 5):
+                rows.append(ft.Row(
+                    cards[i:i + 5],
+                    spacing=4,
+                    alignment=ft.MainAxisAlignment.CENTER,
+                ))
+            return ft.Column(
+                rows, spacing=4,
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            )
 
         def refresh_results(new_results: list[PullResult] | None = None) -> None:
             """최근 뽑기 결과 목록 갱신"""
             result_list.controls = []
 
-            # 새로운 결과가 있으면 상단에 추가 표시
+            # 새로운 결과: 이미지 그리드로 표시
             if new_results:
                 result_list.controls.append(
-                    ft.Text("─── 이번 뽑기 결과 ───", size=12, color=ft.colors.GREY_600)
+                    ft.Text("─── 이번 뽑기 결과 ───", size=12, color=ft.Colors.GREY_600)
                 )
-                for r in new_results:
-                    result_list.controls.append(_make_result_card(r))
+                result_list.controls.append(_make_pull_grid(new_results))
                 result_list.controls.append(ft.Divider(height=1))
 
             # DB에서 최근 기록 로드
@@ -134,7 +288,7 @@ def create_gacha_view(service: GachaService) -> callable:
             recent_df = service.get_recent_pulls(bid, limit=20)
             if not recent_df.empty:
                 result_list.controls.append(
-                    ft.Text("─── 최근 기록 ───", size=12, color=ft.colors.GREY_600)
+                    ft.Text("─── 최근 기록 ───", size=12, color=ft.Colors.GREY_600)
                 )
                 for _, row in recent_df.iterrows():
                     star = int(row["star_grade"])
@@ -144,42 +298,52 @@ def create_gacha_view(service: GachaService) -> callable:
                     label = f"{stars_str} {name}" + (" 🎯픽업" if is_pickup else "")
                     result_list.controls.append(
                         ft.Container(
-                            content=ft.Text(label, size=12, color=STAR_TEXT_COLORS.get(star, ft.colors.BLACK)),
-                            bgcolor=STAR_COLORS.get(star, ft.colors.GREY_100),
+                            content=ft.Text(
+                                label,
+                                size=12,
+                                color=STAR_TEXT_COLORS.get(star, ft.Colors.BLACK),
+                            ),
+                            bgcolor=STAR_COLORS.get(star, ft.Colors.GREY_100),
                             border_radius=4,
-                            padding=ft.padding.symmetric(horizontal=8, vertical=4),
+                            padding=ft.Padding(left=8, right=8, top=4, bottom=4),
                         )
                     )
 
-            result_list.update()
-
-        def _make_result_card(r: PullResult) -> ft.Control:
-            """뽑기 결과 1건 카드 위젯"""
-            stars_str = "★" * r.star_grade
-            label = f"{stars_str} {r.student_name}"
-            if r.is_pickup:
-                label += " 🎯픽업"
-            if r.is_new:
-                label += " ✨NEW"
-            if r.eleph_gained > 0:
-                label += f" (엘레프 +{r.eleph_gained})"
-
-            return ft.Container(
-                content=ft.Text(label, size=13, weight=ft.FontWeight.W_500,
-                                color=STAR_TEXT_COLORS.get(r.star_grade, ft.colors.BLACK)),
-                bgcolor=STAR_COLORS.get(r.star_grade, ft.colors.GREY_100),
-                border_radius=6,
-                padding=ft.padding.symmetric(horizontal=10, vertical=6),
-                border=ft.border.all(
-                    2, ft.colors.AMBER_400
-                ) if r.star_grade == 3 else None,
-            )
+            try:
+                result_list.update()
+            except RuntimeError:
+                pass
 
         # ── 이벤트 핸들러 ────────────────────────────────────────────────────
 
+        def on_banner_search(e) -> None:
+            """픽업 학생 이름 검색 → 드롭다운 옵션 필터링"""
+            keyword = e.control.value.strip().lower()
+            state["search"] = keyword
+            filtered = [
+                opt
+                for opt in all_options
+                if keyword == "" or keyword in opt.text.lower()
+            ]
+            banner_dropdown.options = filtered
+            # 현재 선택이 필터 밖이면 첫 번째로 변경
+            valid_keys = {opt.key for opt in filtered}
+            if str(state["banner_id"]) not in valid_keys and filtered:
+                state["banner_id"] = int(filtered[0].key)
+                banner_dropdown.value = filtered[0].key
+                refresh_pickup_card()
+                refresh_stats()
+                refresh_results()
+            try:
+                banner_dropdown.update()
+            except RuntimeError:
+                pass
+
         def on_banner_change(e) -> None:
             """배너 선택 변경"""
-            state["banner_id"] = int(e.control.value)
+            if e.control.value:
+                state["banner_id"] = int(e.control.value)
+            refresh_pickup_card()
             refresh_stats()
             refresh_results()
 
@@ -198,67 +362,149 @@ def create_gacha_view(service: GachaService) -> callable:
                 refresh_stats()
                 refresh_results([result])
 
+        def on_reset_banner(e) -> None:
+            """뽑기 초기화 버튼 — 확인 모달 표시"""
+            bid = state["banner_id"]
+            banner_name = banner_map.get(bid, "")
+
+            def do_reset(ev) -> None:
+                dlg.open = False
+                page.update()
+                service.reset_banner(bid)
+                refresh_stats()
+                refresh_results()
+
+            def cancel(ev) -> None:
+                dlg.open = False
+                page.update()
+
+            dlg = ft.AlertDialog(
+                modal=True,
+                title=ft.Text("뽑기 기록 초기화", weight=ft.FontWeight.BOLD),
+                content=ft.Text(
+                    f"[{banner_name}] 배너의 모든 뽑기 기록이 삭제됩니다.\n"
+                    "이 작업은 되돌릴 수 없습니다. 계속하시겠습니까?",
+                    size=13,
+                ),
+                actions=[
+                    ft.TextButton("취소", on_click=cancel),
+                    ft.ElevatedButton(
+                        "초기화",
+                        on_click=do_reset,
+                        style=ft.ButtonStyle(
+                            bgcolor=ft.Colors.RED_700,
+                            color=ft.Colors.WHITE,
+                        ),
+                    ),
+                ],
+                actions_alignment=ft.MainAxisAlignment.END,
+            )
+            page.overlay.append(dlg)
+            dlg.open = True
+            page.update()
+
         # 이벤트 연결
-        banner_dropdown.on_change = on_banner_change
+        banner_search.on_change = on_banner_search
+        banner_dropdown.on_select = on_banner_change
         claim_btn.on_click = on_claim
 
         # 초기 상태 로드
+        refresh_pickup_card()
         refresh_stats()
         refresh_results()
 
         # ── 레이아웃 조립 ────────────────────────────────────────────────────
-        return ft.Column([
-            # 배너 선택
-            ft.Row([banner_dropdown], alignment=ft.MainAxisAlignment.START),
-
-            # 진행도 바
-            ft.Card(
-                content=ft.Container(
-                    content=ft.Column([
-                        ft.Text("모집 진행도", size=14, weight=ft.FontWeight.BOLD),
-                        ft.Row([progress_bar, progress_text], spacing=12),
-                        ft.Row([stat_total, stat_star3, stat_to_pity], spacing=24),
-                    ], spacing=8),
-                    padding=16,
-                )
-            ),
-
-            # 뽑기 버튼
-            ft.Row([
-                ft.ElevatedButton(
-                    text="1회 뽑기",
-                    icon=ft.icons.CASINO,
-                    on_click=lambda e: on_pull(1),
-                    style=ft.ButtonStyle(
-                        bgcolor=ft.colors.BLUE_700,
-                        color=ft.colors.WHITE,
-                        padding=ft.padding.symmetric(horizontal=20, vertical=12),
-                    ),
+        return ft.Column(
+            [
+                # 픽업 학생 이름 검색 + 배너 드롭다운
+                ft.Row([banner_search, banner_dropdown], spacing=8),
+                # 진행도 바
+                ft.Card(
+                    content=ft.Container(
+                        content=ft.Row(
+                            [
+                                # 좌측: 진행도 정보
+                                ft.Column(
+                                    [
+                                        ft.Text(
+                                            "모집 진행도",
+                                            size=14,
+                                            weight=ft.FontWeight.BOLD,
+                                        ),
+                                        ft.Row([progress_bar, progress_text], spacing=12),
+                                        ft.Row(
+                                            [stat_total, stat_star3, stat_to_pity],
+                                            spacing=24,
+                                        ),
+                                    ],
+                                    spacing=8,
+                                    expand=True,
+                                ),
+                                # 우측: 픽업 학생 사진
+                                pickup_card,
+                            ],
+                            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                            spacing=12,
+                        ),
+                        padding=16,
+                    )
                 ),
-                ft.ElevatedButton(
-                    text="10회 뽑기",
-                    icon=ft.icons.CASINO,
-                    on_click=lambda e: on_pull(10),
-                    style=ft.ButtonStyle(
-                        bgcolor=ft.colors.INDIGO_700,
-                        color=ft.colors.WHITE,
-                        padding=ft.padding.symmetric(horizontal=20, vertical=12),
-                    ),
+                # 뽑기 버튼
+                ft.Row(
+                    [
+                        ft.ElevatedButton(
+                            "1회 뽑기",
+                            icon=ft.Icons.CASINO,
+                            on_click=lambda e: on_pull(1),
+                            style=ft.ButtonStyle(
+                                bgcolor=ft.Colors.BLUE_700,
+                                color=ft.Colors.WHITE,
+                                padding=ft.Padding(
+                                    left=20, right=20, top=12, bottom=12
+                                ),
+                            ),
+                        ),
+                        ft.ElevatedButton(
+                            "10회 뽑기",
+                            icon=ft.Icons.CASINO,
+                            on_click=lambda e: on_pull(10),
+                            style=ft.ButtonStyle(
+                                bgcolor=ft.Colors.INDIGO_700,
+                                color=ft.Colors.WHITE,
+                                padding=ft.Padding(
+                                    left=20, right=20, top=12, bottom=12
+                                ),
+                            ),
+                        ),
+                        claim_btn,
+                        ft.ElevatedButton(
+                            "초기화",
+                            icon=ft.Icons.DELETE_SWEEP,
+                            on_click=on_reset_banner,
+                            style=ft.ButtonStyle(
+                                bgcolor=ft.Colors.RED_700,
+                                color=ft.Colors.WHITE,
+                                padding=ft.Padding(
+                                    left=16, right=16, top=12, bottom=12
+                                ),
+                            ),
+                        ),
+                    ],
+                    spacing=12,
                 ),
-                claim_btn,
-            ], spacing=12),
-
-            ft.Divider(height=1),
-
-            # 뽑기 결과 목록
-            ft.Text("뽑기 결과", size=14, weight=ft.FontWeight.BOLD),
-            ft.Container(
-                content=result_list,
-                expand=True,
-                border=ft.border.all(1, ft.colors.OUTLINE_VARIANT),
-                border_radius=8,
-                padding=8,
-            ),
-        ], spacing=12, expand=True)
+                ft.Divider(height=1),
+                # 뽑기 결과 목록
+                ft.Text("뽑기 결과", size=14, weight=ft.FontWeight.BOLD),
+                ft.Container(
+                    content=result_list,
+                    expand=True,
+                    border=ft.Border.all(1, ft.Colors.OUTLINE_VARIANT),
+                    border_radius=8,
+                    padding=8,
+                ),
+            ],
+            spacing=12,
+            expand=True,
+        )
 
     return build
