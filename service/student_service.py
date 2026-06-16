@@ -235,6 +235,11 @@ class StudentService:
         tactic_role: Optional[str] = None,
         keyword: Optional[str] = None,
     ) -> pd.DataFrame:
+        """
+        Use Case 3.1: 학생 목록 조회 및 필터링
+        student LEFT JOIN student_image(icon)으로 아이콘까지 한 번에 받아온다.
+        모든 필터 파라미터는 선택값(None이면 해당 조건 미적용).
+        """
         return self._query_repo.get_students_with_icons(
             star_grade=star_grade, school=school,
             tactic_role=tactic_role, keyword=keyword,
@@ -249,10 +254,13 @@ class StudentService:
         return self._stat_repo.find_by_student(student_id)
 
     def get_collection_image_url(self, student_id: int) -> Optional[str]:
+        """학생 상세 패널 상단에 띄울 초상화(collection) 이미지 URL 조회"""
         return self._image_repo.find_url(student_id, "collection")
 
     def get_schools(self) -> list[str]:
+        """필터 드롭다운에 쓸 학교 목록 (DISTINCT)"""
         return self._student_repo.find_distinct_schools()
 
     def get_roles(self) -> list[str]:
+        """필터 드롭다운에 쓸 전술 역할 목록 (DISTINCT)"""
         return self._student_repo.find_distinct_roles()

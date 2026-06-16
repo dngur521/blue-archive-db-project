@@ -38,6 +38,7 @@ class DuckDBStudentStatRepository(IRepository):
         """)
 
     def count(self) -> int:
+        """student_stat 테이블 레코드 수 반환"""
         result = self._con.execute("SELECT COUNT(*) FROM student_stat").fetchone()
         return result[0] if result else 0
 

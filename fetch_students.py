@@ -12,6 +12,8 @@ import urllib.request
 BASE = "https://schaledb.com/data/kr"
 
 def fetch_json(url: str) -> dict:
+    """주어진 URL에서 JSON을 GET으로 받아 dict로 반환.
+    SchaleDB는 User-Agent 헤더가 없는 요청을 차단하므로 브라우저처럼 위장한다."""
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
@@ -59,6 +61,17 @@ def parse_skills(raw_skills: dict) -> dict:
     return result
 
 def parse_student(sid: str, raw: dict, loc: dict) -> dict:
+    """
+    SchaleDB 학생 원본 데이터(raw) 1명을 우리 스키마에 맞는 dict로 변환.
+
+    Args:
+        sid: 학생 고유 ID (문자열, students.min.json의 key)
+        raw: students.min.json에서 해당 학생의 원본 JSON 객체
+        loc: localization.min.json 전체 (학교/동아리/타입 코드 → 한국어 매핑)
+
+    Returns: data/students.json에 그대로 저장될 학생 1명 dict
+             (기본 정보 + 전투 정보 + 스킬 + 무기/애용품 + 프로필)
+    """
     # ── 로컬라이즈 테이블 단축 참조 ────────────────────────────
     school_kr     = loc.get("School", {})
     school_long   = loc.get("SchoolLong", {})
@@ -121,6 +134,10 @@ def parse_student(sid: str, raw: dict, loc: dict) -> dict:
     skill_ex_amt   = raw.get("SkillExMaterialAmount", [])
 
     def zip_mat(ids_list, amt_list):
+        """레벨별 [아이템ID 목록]과 [수량 목록]을 한 쌍으로 묶어
+        [[{"item_id":.., "amount":..}, ...], ...] 형태로 변환.
+        예: ids_list[0]=[1,2], amt_list[0]=[3,4] (Lv1→2 재료)
+            → result[0]=[{"item_id":1,"amount":3}, {"item_id":2,"amount":4}]"""
         result = []
         for ids, amts in zip(ids_list, amt_list):
             result.append([{"item_id": i, "amount": a} for i, a in zip(ids, amts)])
@@ -212,6 +229,13 @@ def parse_student(sid: str, raw: dict, loc: dict) -> dict:
     }
 
 def main():
+    """
+    실행 흐름:
+      1) SchaleDB에서 학생 원본 데이터 + 로컬라이즈 테이블을 받아온다
+      2) 학생별로 parse_student()를 돌려 우리 스키마 dict로 변환
+      3) ID 순으로 정렬 후 data/students.json에 저장
+      4) 확인용으로 상위 3명 샘플을 콘솔에 출력
+    """
     print("SchaleDB 한국어 학생 데이터 수집 시작...")
 
     print(f"  GET {BASE}/students.min.json")

@@ -22,9 +22,12 @@ from repository.interfaces import (
 
 @dataclass
 class CostSummary:
-    """육성 비용 계산 결과 데이터 클래스"""
+    """
+    육성 비용 계산 결과 데이터 클래스
+    (참고: 활동 보고서 아이템 단위 환산은 아직 크레딧으로만 계산하고 있어
+     별도 exp_items 필드는 두지 않았다 — 5.2/6.2절의 향후 개선 과제 참고)
+    """
     credit: int = 0                         # 총 필요 크레딧
-    exp_items: dict = field(default_factory=dict)   # 활동 보고서 아이템별 수량
     skill_credits: int = 0                  # 스킬 강화 크레딧
     skill_items: dict = field(default_factory=dict)  # 스킬 재료 아이템별 수량
     eleph_needed: int = 0                   # 필요 엘레프 (성급 상승)
@@ -51,6 +54,7 @@ class CultivationService:
         self._query_repo = query_repo
         self._costs: dict = {}
         self._students_data: list[dict] = []
+        self._items: dict = {}  # items.json 캐시 (initialize()에서 1회 로드)
 
     # -------------------------------------------------------------------------
     # 초기화
@@ -75,6 +79,11 @@ class CultivationService:
             with open(students_path, encoding="utf-8") as f:
                 data = json.load(f)
             self._students_data = data.get("students", [])
+
+        # items.json 로드 (아이템 이름 조회용)
+        # 예전엔 비용 계산할 때마다(_calc_skill_items 호출마다) 매번 파일을 다시 열어
+        # 읽었는데, 어차피 앱 실행 중 안 바뀌는 정적 데이터라 여기서 한 번만 로드해 둔다.
+        self._items = self._load_items()
 
     # -------------------------------------------------------------------------
     # 보유 학생 조회
@@ -141,8 +150,10 @@ class CultivationService:
         """
         육성 비용 계산
         - 레벨업: char_level 비용 테이블 기반
-        - 스킬: skill 크레딧 + 학생별 재료 비용
-        - 인연: gift 수량 계산
+        - 스킬: skill 크레딧 + 학생별 재료 비용 (일반/강화/서브 + EX 스킬)
+        - 성급 상승: 필요 엘레프 vs 현재 보유 엘레프 비교
+        - 인연: gift 수량 계산 (SR/R/N급 선물 그리디 환산)
+        각 항목은 "목표 > 현재"일 때만 계산하고, 아니면 0/빈 값으로 남는다.
         """
         summary = CostSummary()
 
@@ -231,7 +242,7 @@ class CultivationService:
         if student_data is None:
             return {}
 
-        items = self._load_items()
+        items = self._items
         item_totals: dict[str, int] = {}
 
         # 기본/강화/서브 스킬 재료 (동일 테이블)
@@ -275,10 +286,14 @@ class CultivationService:
         r_value = gift_values.get("R급 선물", 5)
         n_value = gift_values.get("N급 선물", 1)
 
+        # 큰 단위(SR)부터 차례로 소진시키는 "동전 교환" 방식 그리디 계산
         sr_count = total_exp // sr_value
         remainder = total_exp % sr_value
         r_count = remainder // r_value
-        n_count = remainder % r_value
+        remainder -= r_count * r_value
+        # 마지막 남은 EXP는 N급 선물로 채운다. 올림 처리를 해야 부족분 없이
+        # 정확히 충당할 수 있다 (n_value가 실제 데이터처럼 1이면 remainder와 동일).
+        n_count = -(-remainder // n_value) if n_value > 0 else 0
 
         result = {}
         if sr_count > 0:

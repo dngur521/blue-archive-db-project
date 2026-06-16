@@ -10,11 +10,16 @@ Use Case 3.3.2: 육성 비용 계산
 - 보유 학생 이름 검색 추가
 - 폼 스크롤 가능 (잘림 없음)
 - 육성 수치 초기화 버튼 추가
+
+컨트롤 갱신(.update())과 확인 모달은 views/_helpers.py의
+safe_update() / show_confirm_dialog() 공통 헬퍼를 사용한다
+(student_view.py, gacha_view.py와 동일한 헬퍼 공유).
 """
 
 import flet as ft
 
 from service.cultivation_service import CostSummary, CultivationService
+from views._helpers import safe_update, show_confirm_dialog
 
 
 def create_cultivation_view(service: CultivationService) -> callable:
@@ -44,6 +49,12 @@ def create_cultivation_view(service: CultivationService) -> callable:
         # ── 육성 입력 폼 필드 ────────────────────────────────────────────────
         selected_name = ft.Text("학생을 선택하세요", size=16, weight=ft.FontWeight.BOLD)
 
+        # (DB 컬럼명, 화면 표시 라벨, 최솟값, 최댓값)
+        # 최댓값은 repository/duckdb/cultivation.py의 CHECK 제약과 반드시 일치시켜야
+        # 한다. 예전엔 bond_rank 최댓값이 100이었는데, 실제 costs.json 인연 경험치
+        # 테이블이 50랭크까지만 제공해서 DB 제약을 50으로 낮췄을 때 이 폼은
+        # 그대로 100으로 남아 있던 적이 있었다 — 그 상태로 91~100을 입력하면
+        # DB INSERT 시 CHECK 제약 위반으로 예외가 났을 것이다. 지금은 50으로 일치.
         FIELDS = [
             ("level",         "레벨",     1, 90),
             ("ex_skill",      "EX 스킬",  1, 5),
@@ -51,7 +62,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
             ("enhance_skill", "강화 스킬", 1, 10),
             ("sub_skill",     "서브 스킬", 1, 10),
             ("weapon_level",  "고유 무기", 1, 50),
-            ("bond_rank",     "인연 랭크", 1, 100),
+            ("bond_rank",     "인연 랭크", 1, 50),
             ("star",          "성급",     1, 5),
         ]
 
@@ -59,6 +70,8 @@ def create_cultivation_view(service: CultivationService) -> callable:
         goal_fields: dict[str, ft.TextField] = {}
 
         def make_field(min_val: int, max_val: int) -> ft.TextField:
+            """숫자 입력칸 1개 생성. 포커스를 벗어나면(on_blur) 값을 [min_val, max_val]
+            범위로 강제 클램프하고, 숫자가 아니면 min_val로 되돌린다."""
             def on_blur(e):
                 try:
                     v = int(e.control.value or min_val)
@@ -66,10 +79,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
                     v = min_val
                 v = max(min_val, min(max_val, v))
                 e.control.value = str(v)
-                try:
-                    e.control.update()
-                except RuntimeError:
-                    pass
+                safe_update(e.control)
             return ft.TextField(
                 value=str(min_val),
                 width=65,
@@ -107,17 +117,8 @@ def create_cultivation_view(service: CultivationService) -> callable:
         # ── 비용 계산 결과 ───────────────────────────────────────────────────
         cost_result = ft.Column([], spacing=4, scroll=ft.ScrollMode.AUTO, expand=True)
 
-        # ── 헬퍼 ────────────────────────────────────────────────────────────
-
-        def _safe_update(*controls) -> None:
-            """페이지 미연결 시 RuntimeError 무시"""
-            for ctrl in controls:
-                try:
-                    ctrl.update()
-                except RuntimeError:
-                    pass
-
         # ── 보유 학생 목록 갱신 ──────────────────────────────────────────────
+        # (컨트롤 update()는 views/_helpers.safe_update() 공통 헬퍼를 사용한다)
 
         def refresh_owned(keyword: str = "") -> None:
             """보유 학생 버튼 목록 갱신 (키워드 필터 포함)"""
@@ -132,7 +133,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
                         size=13,
                     )
                 )
-                _safe_update(owned_row)
+                safe_update(owned_row)
                 return
 
             for _, row in df.iterrows():
@@ -202,7 +203,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
                 )
                 owned_row.controls.append(btn)
 
-            _safe_update(owned_row)
+            safe_update(owned_row)
 
         # ── 학생 선택 시 폼 자동 입력 ────────────────────────────────────────
 
@@ -210,7 +211,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
             state["student_id"] = student_id
             state["student_name"] = name
             selected_name.value = name
-            _safe_update(selected_name)
+            safe_update(selected_name)
 
             cultivation = service.get_cultivation(student_id)
             if cultivation is not None:
@@ -228,7 +229,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
                     goal_fields[key].value = current_fields[key].value
 
             for key, *_ in FIELDS:
-                _safe_update(current_fields[key], goal_fields[key])
+                safe_update(current_fields[key], goal_fields[key])
 
             cost_result.controls = [
                 ft.Text(
@@ -237,7 +238,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
                     size=13,
                 )
             ]
-            _safe_update(cost_result)
+            safe_update(cost_result)
 
             # 선택된 버튼 강조 갱신
             refresh_owned(state["search"])
@@ -250,54 +251,34 @@ def create_cultivation_view(service: CultivationService) -> callable:
                 cost_result.controls = [
                     ft.Text("먼저 학생을 선택하세요.", color=ft.Colors.GREY_500, size=13)
                 ]
-                _safe_update(cost_result)
+                safe_update(cost_result)
                 return
 
             name = state["student_name"]
 
-            def do_reset(ev) -> None:
-                dlg.open = False
-                page.update()
+            def do_reset() -> None:
                 reset_dict = {}
                 for key, _, min_v, *_ in FIELDS:
                     current_fields[key].value = str(min_v)
                     goal_fields[key].value    = str(min_v)
                     reset_dict[key] = min_v
-                    _safe_update(current_fields[key], goal_fields[key])
+                    safe_update(current_fields[key], goal_fields[key])
                 service.calculate_and_save(state["student_id"], reset_dict, reset_dict)
                 cost_result.controls = [
                     ft.Text("수치가 초기화되었습니다.", color=ft.Colors.GREY_500, size=13)
                 ]
-                _safe_update(cost_result)
+                safe_update(cost_result)
 
-            def cancel(ev) -> None:
-                dlg.open = False
-                page.update()
-
-            dlg = ft.AlertDialog(
-                modal=True,
-                title=ft.Text("육성 수치 초기화", weight=ft.FontWeight.BOLD),
-                content=ft.Text(
+            show_confirm_dialog(
+                page,
+                title="육성 수치 초기화",
+                message=(
                     f"[{name}]의 현재·목표 수치가 모두 최솟값으로 초기화됩니다.\n"
-                    "계속하시겠습니까?",
-                    size=13,
+                    "계속하시겠습니까?"
                 ),
-                actions=[
-                    ft.TextButton("취소", on_click=cancel),
-                    ft.ElevatedButton(
-                        "초기화",
-                        on_click=do_reset,
-                        style=ft.ButtonStyle(
-                            bgcolor=ft.Colors.RED_700,
-                            color=ft.Colors.WHITE,
-                        ),
-                    ),
-                ],
-                actions_alignment=ft.MainAxisAlignment.END,
+                on_confirm=do_reset,
+                confirm_label="초기화",
             )
-            page.overlay.append(dlg)
-            dlg.open = True
-            page.update()
 
         # ── 비용 계산 ────────────────────────────────────────────────────────
 
@@ -317,7 +298,7 @@ def create_cultivation_view(service: CultivationService) -> callable:
 
             summary = service.calculate_and_save(sid, cur_dict, goal_dict)
             cost_result.controls = _build_cost_rows(summary)
-            _safe_update(cost_result)
+            safe_update(cost_result)
 
         def _build_cost_rows(summary: CostSummary) -> list[ft.Control]:
             rows = [ft.Text("── 필요 재화 ──", weight=ft.FontWeight.BOLD, size=14)]
@@ -373,10 +354,8 @@ def create_cultivation_view(service: CultivationService) -> callable:
             )
 
         def on_reset_all_owned(e) -> None:
-            """보유 학생 전체 초기화 버튼 — 확인 모달"""
-            def do_reset(ev) -> None:
-                dlg.open = False
-                page.update()
+            """보유 학생 전체 초기화 버튼 — 확인 모달을 띄운 뒤, 확인 시에만 실제 삭제 수행"""
+            def do_reset() -> None:
                 service.reset_all_owned()
                 state["student_id"] = None
                 state["student_name"] = ""
@@ -387,37 +366,19 @@ def create_cultivation_view(service: CultivationService) -> callable:
                 cost_result.controls = [
                     ft.Text("보유 학생이 초기화되었습니다.", color=ft.Colors.GREY_500, size=13)
                 ]
-                _safe_update(selected_name, cost_result, *current_fields.values(), *goal_fields.values())
+                safe_update(selected_name, cost_result, *current_fields.values(), *goal_fields.values())
                 refresh_owned()
 
-            def cancel(ev) -> None:
-                dlg.open = False
-                page.update()
-
-            dlg = ft.AlertDialog(
-                modal=True,
-                title=ft.Text("보유 학생 전체 초기화", weight=ft.FontWeight.BOLD),
-                content=ft.Text(
+            show_confirm_dialog(
+                page,
+                title="보유 학생 전체 초기화",
+                message=(
                     "모든 보유 학생과 육성 목표가 삭제됩니다.\n"
-                    "이 작업은 되돌릴 수 없습니다. 계속하시겠습니까?",
-                    size=13,
+                    "이 작업은 되돌릴 수 없습니다. 계속하시겠습니까?"
                 ),
-                actions=[
-                    ft.TextButton("취소", on_click=cancel),
-                    ft.ElevatedButton(
-                        "전체 초기화",
-                        on_click=do_reset,
-                        style=ft.ButtonStyle(
-                            bgcolor=ft.Colors.RED_700,
-                            color=ft.Colors.WHITE,
-                        ),
-                    ),
-                ],
-                actions_alignment=ft.MainAxisAlignment.END,
+                on_confirm=do_reset,
+                confirm_label="전체 초기화",
             )
-            page.overlay.append(dlg)
-            dlg.open = True
-            page.update()
 
         # 검색 이벤트
         def on_search(e) -> None:

@@ -5,7 +5,9 @@ DuckDB student 테이블 구현체
 Entity 1: student (학생 기본 정보)
 - SchaleDB API에서 사전 수집한 260명의 학생 정보 저장
 - star_grade: 1성/2성/3성 (3성만 배너 생성 대상)
-- weapon_name, gear_name: UNIQUE 제약 → 후보키 역할
+- weapon_name, gear_name: UNIQUE 제약 없음 (의상/코스튬 버전 학생이 원본
+  학생과 동일한 고유 무기·애용품 이름을 그대로 공유하기 때문에, 실제
+  SchaleDB 데이터 적재 중 UNIQUE 위반이 발생하여 설계서 대비 제거함)
 """
 
 from typing import Optional
@@ -23,8 +25,11 @@ class DuckDBStudentRepository(IStudentRepository):
     def create_table(self) -> None:
         """
         student 테이블 생성 (DDL)
-        - weapon_name, gear_name: UNIQUE → 후보키 승격 (BCNF 준수)
-        - 테이블이 이미 존재하면 CREATE SEQUENCE만 스킵
+        - id: SchaleDB 학생 고유 ID를 그대로 PK로 사용 (별도 SEQUENCE 불필요)
+        - star_grade: CHECK 제약으로 1~3 성급만 허용
+        - weapon_name/gear_name: UNIQUE 제약 없음 (코스튬 학생 공유 가능 → 위 모듈
+          docstring 참고)
+        - IF NOT EXISTS이므로 앱을 여러 번 실행해도 안전 (중복 생성 안 됨)
         """
         self._con.execute("""
             CREATE TABLE IF NOT EXISTS student (

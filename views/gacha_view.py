@@ -11,11 +11,16 @@ Use Case 3.2.1: 가챠 결과 저장
 - 1회 / 10회 뽑기 버튼
 - 최근 뽑기 결과 표시
 - 통계 (총 뽑기 수, 3성 획득 수)
+
+컨트롤 갱신(.update())과 확인 모달은 views/_helpers.py의
+safe_update() / show_confirm_dialog() 공통 헬퍼를 사용한다
+(student_view.py, cultivation_view.py와 동일한 헬퍼 공유).
 """
 
 import flet as ft
 
 from service.gacha_service import GachaService, PullResult
+from views._helpers import safe_update, show_confirm_dialog
 
 # 성급별 배경색
 STAR_COLORS = {
@@ -120,8 +125,7 @@ def create_gacha_view(service: GachaService) -> callable:
             info = banner_info.get(state["banner_id"])
             if not info:
                 pickup_card.content = None
-                try: pickup_card.update()
-                except RuntimeError: pass
+                safe_update(pickup_card)
                 return
 
             sid   = info["student_id"]
@@ -161,11 +165,15 @@ def create_gacha_view(service: GachaService) -> callable:
                 spacing=4,
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             )
-            try: pickup_card.update()
-            except RuntimeError: pass
+            safe_update(pickup_card)
 
         def refresh_stats() -> None:
-            """통계 및 진행도 바 갱신"""
+            """
+            통계 및 진행도 바 갱신
+            - get_stats()로 총 뽑기 수 / 3성 획득 수 / 현재 사이클 뽑기 수를 조회
+            - 천장(200회)까지 남은 횟수를 계산해 진행도 바·텍스트에 반영
+            - 200회 도달 시 [픽업 확정 수령] 버튼 활성화
+            """
             bid = state["banner_id"]
             stats = service.get_stats(bid)
             total = stats["total_pulls"]
@@ -180,30 +188,11 @@ def create_gacha_view(service: GachaService) -> callable:
             progress_text.value = f"{min(current, 200)} / 200"
             claim_btn.disabled = current < 200
 
-            try:
-                stat_total.update()
-            except RuntimeError:
-                pass
-            try:
-                stat_star3.update()
-            except RuntimeError:
-                pass
-            try:
-                stat_to_pity.update()
-            except RuntimeError:
-                pass
-            try:
-                progress_bar.update()
-            except RuntimeError:
-                pass
-            try:
-                progress_text.update()
-            except RuntimeError:
-                pass
-            try:
-                claim_btn.update()
-            except RuntimeError:
-                pass
+            # 위 6개 컨트롤을 한 번에 갱신 (마운트 전이면 safe_update가 조용히 무시)
+            safe_update(
+                stat_total, stat_star3, stat_to_pity,
+                progress_bar, progress_text, claim_btn,
+            )
 
         def _make_pull_grid(results: list[PullResult]) -> ft.Control:
             """뽑기 결과 5×N 이미지 그리드"""
@@ -309,10 +298,7 @@ def create_gacha_view(service: GachaService) -> callable:
                         )
                     )
 
-            try:
-                result_list.update()
-            except RuntimeError:
-                pass
+            safe_update(result_list)
 
         # ── 이벤트 핸들러 ────────────────────────────────────────────────────
 
@@ -334,10 +320,7 @@ def create_gacha_view(service: GachaService) -> callable:
                 refresh_pickup_card()
                 refresh_stats()
                 refresh_results()
-            try:
-                banner_dropdown.update()
-            except RuntimeError:
-                pass
+            safe_update(banner_dropdown)
 
         def on_banner_change(e) -> None:
             """배너 선택 변경"""
@@ -363,45 +346,25 @@ def create_gacha_view(service: GachaService) -> callable:
                 refresh_results([result])
 
         def on_reset_banner(e) -> None:
-            """뽑기 초기화 버튼 — 확인 모달 표시"""
+            """뽑기 초기화 버튼 — 확인 모달을 띄운 뒤, 확인 시에만 실제 삭제 수행"""
             bid = state["banner_id"]
             banner_name = banner_map.get(bid, "")
 
-            def do_reset(ev) -> None:
-                dlg.open = False
-                page.update()
+            def do_reset() -> None:
                 service.reset_banner(bid)
                 refresh_stats()
                 refresh_results()
 
-            def cancel(ev) -> None:
-                dlg.open = False
-                page.update()
-
-            dlg = ft.AlertDialog(
-                modal=True,
-                title=ft.Text("뽑기 기록 초기화", weight=ft.FontWeight.BOLD),
-                content=ft.Text(
+            show_confirm_dialog(
+                page,
+                title="뽑기 기록 초기화",
+                message=(
                     f"[{banner_name}] 배너의 모든 뽑기 기록이 삭제됩니다.\n"
-                    "이 작업은 되돌릴 수 없습니다. 계속하시겠습니까?",
-                    size=13,
+                    "이 작업은 되돌릴 수 없습니다. 계속하시겠습니까?"
                 ),
-                actions=[
-                    ft.TextButton("취소", on_click=cancel),
-                    ft.ElevatedButton(
-                        "초기화",
-                        on_click=do_reset,
-                        style=ft.ButtonStyle(
-                            bgcolor=ft.Colors.RED_700,
-                            color=ft.Colors.WHITE,
-                        ),
-                    ),
-                ],
-                actions_alignment=ft.MainAxisAlignment.END,
+                on_confirm=do_reset,
+                confirm_label="초기화",
             )
-            page.overlay.append(dlg)
-            dlg.open = True
-            page.update()
 
         # 이벤트 연결
         banner_search.on_change = on_banner_search

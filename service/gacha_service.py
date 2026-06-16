@@ -160,30 +160,46 @@ class GachaService:
                 continue
 
             is_pickup = (student_id == pickup_id)
-            is_new = not self._cultivation_repo.exists(student_id)
-            eleph_gained = 0
-
-            if is_new:
-                self._cultivation_repo.insert_on_acquire(student_id)
-                if int(student["star_grade"]) == 3:
-                    self._cultivation_repo.update_current(
-                        student_id, star=4, eleph_count=100,
-                    )
-                    eleph_gained = 100
-            else:
-                eleph_gained = 100 if is_pickup else 30
-                self._cultivation_repo.update_eleph(student_id, eleph_gained)
+            star_grade = int(student["star_grade"])
+            is_new, eleph_gained = self._process_acquisition(student_id, star_grade, is_pickup)
 
             results.append(PullResult(
                 student_id=student_id,
                 student_name=str(student["full_name"]),
-                star_grade=int(student["star_grade"]),
+                star_grade=star_grade,
                 is_pickup=is_pickup,
                 is_new=is_new,
                 eleph_gained=eleph_gained,
             ))
 
         return results
+
+    def _process_acquisition(
+        self, student_id: int, star_grade: int, is_pickup: bool,
+    ) -> tuple[bool, int]:
+        """
+        학생 획득(신규/중복) 공통 처리 — pull()과 claim_pickup() 양쪽에서 호출.
+        예전엔 두 메서드에 거의 동일한 if/else 블록이 그대로 중복되어 있었는데,
+        이 메서드 하나로 합쳤다.
+
+        - 신규 획득: cultivation 레코드를 새로 만든다. 그중 3성 학생은 인게임 규칙상
+          모집 즉시 4성으로 승급되며 부족한 인연각인용 엘레프 100개를 함께 받는다.
+        - 중복 획득: 신규 생성 없이 엘레프만 적립한다 (픽업 중복 100개, 일반 중복 30개).
+
+        Returns:
+            (is_new, eleph_gained) — PullResult 생성에 그대로 쓰인다.
+        """
+        is_new = not self._cultivation_repo.exists(student_id)
+        if is_new:
+            self._cultivation_repo.insert_on_acquire(student_id)
+            if star_grade == 3:
+                self._cultivation_repo.update_current(student_id, star=4, eleph_count=100)
+                return True, 100
+            return True, 0
+
+        eleph_gained = 100 if is_pickup else 30
+        self._cultivation_repo.update_eleph(student_id, eleph_gained)
+        return False, eleph_gained
 
     def _gacha_algorithm(self, pickup_id: int, guarantee_2star: bool) -> int:
         """
@@ -261,24 +277,13 @@ class GachaService:
         if student is None:
             return None
 
-        is_new = not self._cultivation_repo.exists(pickup_id)
-        eleph_gained = 0
-
-        if is_new:
-            self._cultivation_repo.insert_on_acquire(pickup_id)
-            if int(student["star_grade"]) == 3:
-                self._cultivation_repo.update_current(
-                    pickup_id, star=4, eleph_count=100
-                )
-                eleph_gained = 100
-        else:
-            eleph_gained = 100
-            self._cultivation_repo.update_eleph(pickup_id, eleph_gained)
+        star_grade = int(student["star_grade"])
+        is_new, eleph_gained = self._process_acquisition(pickup_id, star_grade, is_pickup=True)
 
         return PullResult(
             student_id=pickup_id,
             student_name=str(student["full_name"]),
-            star_grade=int(student["star_grade"]),
+            star_grade=star_grade,
             is_pickup=True,
             is_new=is_new,
             eleph_gained=eleph_gained,

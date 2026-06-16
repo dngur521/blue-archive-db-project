@@ -11,6 +11,7 @@ import json, os, urllib.request
 BASE = "https://schaledb.com/data/kr"
 
 def fetch_json(url):
+    """URL에서 JSON GET 요청 (User-Agent 위장 필요 — SchaleDB가 기본 요청 차단)"""
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode("utf-8"))
@@ -231,6 +232,11 @@ def build_costs():
     }
 
 def main():
+    """
+    data/students.json(학생 목록)을 읽어 items/gacha_config/costs 3개 JSON을
+    순서대로 생성한다. fetch_students.py를 먼저 실행해 둔 상태여야 한다
+    (gacha_config의 풀 구성을 만들 때 학생 성급/한정 여부가 필요하기 때문).
+    """
     os.makedirs("data", exist_ok=True)
 
     # 학생 데이터 로드 (gacha_config 생성에 필요)
@@ -253,7 +259,7 @@ def main():
     print(f"  저장: data/gacha_config.json")
     print(f"  3성풀: {gacha['pool_sizes']['3성_통상']}명 / 비픽업 개별: {gacha['non_pickup_3star_per_student']}%")
     print(f"  2성풀: {gacha['pool_sizes']['2성_통상']}명 / 개별: {gacha['2star_per_student']}%")
-    print(f"  1성풀: {gacha['pool_sizes']['1성_통상']}명 / 개별: {gacha['1star_per_student']}%")
+    print(f"  1성풀: {gacha['pool_sizes']['1성_통상']}명 (개별 확률 없음, 1~3성에 안 들면 1성으로 처리되는 나머지 확률)")
 
     # 3. 육성 비용 테이블
     print("육성 비용 테이블 생성...")

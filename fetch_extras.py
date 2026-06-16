@@ -8,10 +8,15 @@ import json, urllib.request
 BASE = "https://schaledb.com/data/kr"
 
 def fetch_json(url):
+    """URL에서 JSON GET 요청 (User-Agent 위장 필요 — SchaleDB가 기본 요청 차단)"""
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read())
 
+# SchaleDB 원본 스킬 타입 코드 → DB 컬럼명
+# (service/student_service.py의 SKILL_KEY_MAP과는 키가 다르지만 값(db_type)은
+#  동일하게 맞춰 두었다 — 이 스크립트는 영문 원본 코드에서, student_service는
+#  한국어 라벨에서 출발하기 때문에 입력 키 형태만 다름)
 SKILL_KEY = {
     "Ex":           "ex_skill",
     "Normal":       "normal_skill",
@@ -21,6 +26,12 @@ SKILL_KEY = {
 }
 
 def main():
+    """
+    학생별 능력치(Lv.1/MAX)와 스킬 수치 파라미터(Lv.1/MAX)를 수집해
+    data/student_extras.json으로 저장한다.
+    이 파일은 student_service.py의 _load_extras()에서 읽어
+    student_stat 테이블과 skill.params_lv1/params_max 컬럼을 채우는 데 쓰인다.
+    """
     print("SchaleDB API 요청 중...")
     raw = fetch_json(f"{BASE}/students.min.json")
     print(f"  {len(raw)}명 데이터 수신")

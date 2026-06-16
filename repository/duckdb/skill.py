@@ -11,13 +11,9 @@ DuckDB skill 테이블 구현체
 import pandas as pd
 from repository.interfaces import ISkillRepository, IDatabaseManager
 
-# 인게임 한국어 명칭 → DB skill_type 코드 매핑
-SKILL_TYPE_MAP = {
-    "EX스킬":    "ex_skill",
-    "기본스킬":  "normal_skill",
-    "강화스킬":  "enhance_skill",
-    "서브스킬":  "sub_skill",
-}
+# 인게임 한국어 명칭 → DB skill_type 코드 매핑은 이 파일이 아니라
+# service/student_service.py의 SKILL_KEY_MAP에서 관리한다 (DB 적재 시점에
+# 한 번만 변환하면 되므로, 변환 로직을 Repository보다 한 단계 위인 Service에 둠).
 
 
 class DuckDBSkillRepository(ISkillRepository):

@@ -8,6 +8,7 @@ IDatabaseManager 인터페이스를 DuckDB로 구현 (Adapter Pattern)
 """
 
 import os
+import time
 import duckdb
 from dotenv import load_dotenv
 from repository.interfaces import IDatabaseManager
@@ -27,8 +28,9 @@ class DuckDBManager(IDatabaseManager):
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
 
         # DuckDB 파일 기반 연결 (파일이 없으면 자동 생성)
-        # 잠금 충돌 시 최대 3회 재시도 후 메모리 모드로 폴백
-        import time
+        # 잠금 충돌(IOException) 시 1.5초 간격으로 최대 3회 재시도.
+        # (이전에 종료되지 않은 Flet 프로세스가 같은 DB 파일을 잡고 있는 경우가
+        #  자주 있어서 — 3회 모두 실패하면 RuntimeError로 명확한 안내 메시지를 띄운다)
         last_err = None
         for attempt in range(3):
             try:

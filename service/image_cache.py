@@ -6,6 +6,15 @@ SchaleDB 이미지 로컬 캐시 모듈
 - Flet Image 위젯용 경로 반환:
     - 캐시 있음  → file:///절대경로.webp  (Flet가 로컬 파일 로드)
     - 캐시 없음  → 원래 원격 URL 그대로   (Flet가 네트워크 로드)
+
+[현재 상태]
+실제 화면(views/*.py)에서는 ft.Image(src=원격 URL)을 직접 사용 중이며,
+Flet/Flutter의 이미지 로더는 Referer 헤더 없이도 SchaleDB 이미지를 정상적으로
+받아오는 것이 확인되어(Playwright로 직접 캡처해 검증함) 이 모듈은 아직 호출되지
+않는다. urllib 같은 일반 HTTP 클라이언트로 직접 다운로드할 때는 Referer가
+없으면 SchaleDB가 차단하므로, 추후 "이미지를 서버에서 미리 받아 로컬에
+캐시해 두고 싶다"는 요구가 생기면(예: 오프라인 사용, 트래픽 절감) 그대로
+꺼내 쓸 수 있도록 남겨 둔 유틸리티이다.
 """
 
 import os
