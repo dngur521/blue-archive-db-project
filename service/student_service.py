@@ -110,15 +110,11 @@ class StudentService:
                 skill_data = s.get("skills", {}).get("서브스킬2", {})
                 if not skill_data:
                     continue
-                icon_url = (
-                    f"{SCHALEDB_BASE}/skill/{s['path_name']}_extra_skill.webp"
-                    if s.get("path_name") else None
-                )
                 self._skill_repo.bulk_insert(s["id"], [{
                     "skill_type": "extra_skill",
                     "skill_name": skill_data.get("name", ""),
                     "skill_desc": skill_data.get("desc", ""),
-                    "skill_icon": icon_url,
+                    "skill_icon": skill_data.get("icon"),
                     "params_lv1": None,
                     "params_max": None,
                 }])
@@ -156,20 +152,20 @@ class StudentService:
         print(f"[StudentService] extra_skill params 업데이트 완료: {updated}명")
 
     def _load_skills(self, s: dict) -> None:
-        """스킬 데이터 삽입 (파라미터 제외 - _load_extras에서 업데이트)"""
+        """
+        스킬 데이터 삽입 (파라미터 제외 - _load_extras에서 업데이트)
+        skill_icon: SchaleDB Skills.{타입}.Icon 코드 기반 실제 아이콘 URL
+        (fetch_students.py의 parse_skills()가 students.json에 미리 저장해 둠)
+        """
         skills_raw = s.get("skills", {})
         skills_to_insert = []
         for kor_type, db_type in SKILL_KEY_MAP.items():
             skill_data = skills_raw.get(kor_type, {})
-            icon_url = (
-                f"{SCHALEDB_BASE}/skill/{s['path_name']}_{db_type}.webp"
-                if s.get("path_name") else None
-            )
             skills_to_insert.append({
                 "skill_type": db_type,
                 "skill_name": skill_data.get("name", ""),
                 "skill_desc": skill_data.get("desc", ""),
-                "skill_icon": icon_url,
+                "skill_icon": skill_data.get("icon"),
                 "params_lv1": None,
                 "params_max": None,
             })

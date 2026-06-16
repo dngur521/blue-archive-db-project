@@ -34,16 +34,27 @@ POSITION_KR = {
     "Back":   "후열",
 }
 
+SKILL_ICON_BASE = "https://schaledb.com/images/skill"
+
 def parse_skills(raw_skills: dict) -> dict:
+    """
+    스킬 정보 파싱 (이름/설명/아이콘 URL)
+    - Icon 필드는 SchaleDB가 실제 게임에서 쓰는 스킬 효과 분류 아이콘 코드
+      (예: COMMON_SKILLICON_CIRCLE, COMMON_SKILLICON_HEAL ...).
+      캐릭터마다 고유한 그림은 아니지만 인게임과 동일한 실제 아이콘 자산이다.
+    - URL: https://schaledb.com/images/skill/{Icon}.webp (대소문자 그대로 유지해야 함)
+    """
     if not raw_skills or not isinstance(raw_skills, dict):
         return {}
     result = {}
     for sk_type, skill_data in raw_skills.items():
         label = SKILL_LABEL.get(sk_type, sk_type)
         if isinstance(skill_data, dict):
+            icon = skill_data.get("Icon")
             result[label] = {
                 "name": skill_data.get("Name", ""),
                 "desc": skill_data.get("Desc", ""),
+                "icon": f"{SKILL_ICON_BASE}/{icon}.webp" if icon else None,
             }
     return result
 

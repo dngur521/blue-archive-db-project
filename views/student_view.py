@@ -252,6 +252,8 @@ def create_student_view(service: StudentService) -> ft.Control:
             sk_label = skill_type_labels[sk_type]
             sk_name  = str(row.get("skill_name", "") or "")
             sk_desc  = str(row.get("skill_desc", "") or "")
+            sk_icon  = row.get("skill_icon")
+            sk_icon_url = str(sk_icon) if isinstance(sk_icon, str) and sk_icon else None
             p_lv1    = row.get("params_lv1")
             p_max    = row.get("params_max")
 
@@ -261,7 +263,7 @@ def create_student_view(service: StudentService) -> ft.Control:
             desc_lv1 = _resolve_params(sk_desc, p_lv1_str)
             desc_max = _resolve_params(sk_desc, p_max_str)
 
-            def make_skill_handler(label, name, d1, dm):
+            def make_skill_handler(label, name, d1, dm, icon_url):
                 def handler(e):
                     state_mode = {"v": 0}  # 0=Lv.1, 1=MAX
 
@@ -307,10 +309,18 @@ def create_student_view(service: StudentService) -> ft.Control:
                         )])
                     )
 
+                    title_items = []
+                    if icon_url:
+                        title_items.append(ft.Image(
+                            src=icon_url, width=24, height=24,
+                            error_content=ft.Container(width=24, height=24),
+                        ))
+                    title_items.append(ft.Text(
+                        f"[{label}] {name}", weight=ft.FontWeight.BOLD,
+                    ))
+
                     dlg = ft.AlertDialog(
-                        title=ft.Text(
-                            f"[{label}] {name}", weight=ft.FontWeight.BOLD,
-                        ),
+                        title=ft.Row(title_items, spacing=6, tight=True),
                         content=ft.Container(
                             content=ft.Column(
                                 [toggle_row, ft.Divider(height=6), content_text],
@@ -340,14 +350,27 @@ def create_student_view(service: StudentService) -> ft.Control:
                 "서브": ft.Colors.ORANGE_700,
             }.get(sk_label, ft.Colors.BLUE_700)
 
+            # 스킬 아이콘 + 텍스트 (아이콘 없으면 텍스트만 표시)
+            btn_content_items = []
+            if sk_icon_url:
+                btn_content_items.append(
+                    ft.Image(
+                        src=sk_icon_url,
+                        width=18,
+                        height=18,
+                        error_content=ft.Container(width=18, height=18),
+                    )
+                )
+            btn_content_items.append(ft.Text(sk_label, size=13, color=ft.Colors.WHITE))
+
             skill_buttons.controls.append(
                 ft.ElevatedButton(
-                    sk_label,
-                    on_click=make_skill_handler(sk_label, sk_name, desc_lv1, desc_max),
+                    content=ft.Row(btn_content_items, spacing=4, tight=True),
+                    on_click=make_skill_handler(sk_label, sk_name, desc_lv1, desc_max, sk_icon_url),
                     style=ft.ButtonStyle(
                         bgcolor=btn_color,
                         color=ft.Colors.WHITE,
-                        padding=ft.Padding(left=12, right=12, top=6, bottom=6),
+                        padding=ft.Padding(left=10, right=12, top=6, bottom=6),
                     ),
                 )
             )
