@@ -49,8 +49,15 @@ def build_items():
 # ── 2. 가챠 확률 설정 ────────────────────────────────────────
 def build_gacha_config(students):
     """
-    실제 블루아카이브 가챠 확률 구조 (키사키 픽업 배너 기준)
+    실제 블루아카이브 가챠 확률 구조 (Nexon 공식 확률표 기준)
     풀 구성: is_limited == '통상' 학생만
+
+    ※ 확률은 매 뽑기 고정 (소프트 파티 없음).
+      여기 적힌 per_student 값은 service/gacha_service.py의
+      _gacha_algorithm() 하드코딩 상수와 반드시 일치시킬 것.
+      (과거 소프트 파티 설계의 잔재인 tenth_pull/soft_pity 확률표는
+       실제 알고리즘에서 사용하지 않으므로 제거함 — 횟수가 늘어도
+       확률이 올라가지 않는다.)
     """
     pool = {1: [], 2: [], 3: []}
     for s in students:
@@ -62,30 +69,12 @@ def build_gacha_config(students):
     n1 = len(pool[1])   # 11명
 
     return {
-        "base_rates": {
-            "3성": 3.0,
-            "2성": 18.5,
-            "1성": 78.5,
-        },
-        "pickup_rate": 0.7,                         # 픽업 학생 고정 확률 (%)
-        "non_pickup_3star_per_student": round(2.3 / n3, 6),
-        "2star_per_student":            round(18.5 / n2, 6),
-        "1star_per_student":            round(78.5 / n1, 6),
+        "pickup_rate": 0.7,                    # 픽업 학생 고정 확률 (%)
+        "non_pickup_3star_per_student": 0.022772,  # Nexon 공식 확률표 (고정값)
+        "2star_per_student": 0.804348,             # Nexon 공식 확률표 (고정값)
 
-        # 10연 10번째 : 1성 제외, 2성 97%
-        "tenth_pull": {
-            "3성": 3.0,
-            "2성": 97.0,
-            "1성": 0.0,
-            "2star_per_student": round(97.0 / n2, 6),
-        },
-
-        # 천장
-        "pity": {
-            "hard_pity": 200,           # 200회 → 픽업 학생 확정
-            "soft_pity_start": 73,      # 73회부터 3성 확률 누적 상승
-            "soft_pity_add_per_pull": 3.0,  # 매 뽑기당 +3% 포인트
-        },
+        "hard_pity": 200,             # 200회 → 픽업 학생 확정
+        "tenth_pull_guarantee": "2성 이상 확정 (별도 확률표 없음, 매 뽑기 확률 고정)",
 
         "pool_sizes": {
             "3성_통상": n3,
@@ -99,6 +88,7 @@ def build_gacha_config(students):
         },
 
         "note": (
+            "확률은 매 뽑기 고정이며 누적 뽑기 횟수에 따라 변하지 않음(소프트 파티 없음). "
             "한정/페스/아카이브 학생은 배너 픽업 시에만 등장. "
             "배포 학생은 가챠 풀 미포함."
         ),

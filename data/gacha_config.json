@@ -1,24 +1,7 @@
 {
-  "base_rates": {
-    "3성": 3.0,
-    "2성": 18.5,
-    "1성": 78.5
-  },
   "pickup_rate": 0.7,
-  "non_pickup_3star_per_student": 0.021698,
+  "non_pickup_3star_per_student": 0.022772,
   "2star_per_student": 0.804348,
-  "1star_per_student": 7.136364,
-  "tenth_pull": {
-    "3성": 3.0,
-    "2성": 97.0,
-    "1성": 0.0,
-    "2star_per_student": 4.217391
-  },
-  "pity": {
-    "hard_pity": 200,
-    "soft_pity_start": 73,
-    "soft_pity_add_per_pull": 3.0
-  },
   "pool_sizes": {
     "3성_통상": 106,
     "2성_통상": 23,
@@ -172,5 +155,7 @@
       26005
     ]
   },
-  "note": "한정/페스/아카이브 학생은 배너 픽업 시에만 등장. 배포 학생은 가챠 풀 미포함."
+  "note": "확률은 매 뽑기 고정이며 누적 뽑기 횟수에 따라 변하지 않음(소프트 파티 없음). 한정/페스/아카이브 학생은 배너 픽업 시에만 등장. 배포 학생은 가챠 풀 미포함.",
+  "hard_pity": 200,
+  "tenth_pull_guarantee": "2성 이상 확정 (별도 확률표 없음, 매 뽑기 확률 고정)"
 }

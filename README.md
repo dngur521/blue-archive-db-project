@@ -76,9 +76,10 @@ student ──< cultivation_goal
 │   ├── items.json           # 아이템/장비 데이터
 │   ├── costs.json           # 육성 비용 테이블
 │   └── bluearchive.db       # DuckDB 데이터베이스
-├── 설계서_초안.md            # 설계서 마크다운 원본
+├── 설계서_초안.md            # 설계서 마크다운 원본 (제출 완료, 수정하지 않음)
 ├── 최종보고서_초안.md         # 최종 결과 보고서 마크다운 원본
-└── BlueArchive.erd          # ERD Editor 다이어그램
+├── BlueArchive.erd          # ERD Editor 다이어그램 (설계서 제출 시점 초안, 7테이블)
+└── BlueArchive_최종.erd     # ERD Editor 다이어그램 (구현 완료 후 최종, 8테이블)
 ```
 
 ## 실행 방법
