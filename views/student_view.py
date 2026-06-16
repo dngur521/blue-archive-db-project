@@ -154,11 +154,19 @@ def create_student_view(service: StudentService) -> ft.Control:
                 ),
             ]
 
+        # 무기 종류 코드 → 한국어 (SchaleDB WeaponType 원본 코드 기준)
+        _WEAPON_TYPE_KR = {
+            "SG": "산탄총", "SMG": "기관단총", "AR": "돌격소총",
+            "GL": "유탄발사기", "HG": "권총", "SR": "저격소총",
+            "RG": "철도포", "MG": "기관총", "MT": "박격포", "FT": "화염방사기",
+        }
+        weapon_code = str(s.get("weapon_type_code", ""))
+
         # ── 기본 정보 ────────────────────────────────────────────────────────
         detail_info.controls = [
             stat_row,
             ft.Divider(height=1),
-            _info_row("무기", str(s.get("weapon_type_code", ""))),
+            _info_row("무기", _WEAPON_TYPE_KR.get(weapon_code, weapon_code)),
             _info_row("장갑", str(s.get("armor_type", ""))),
             _info_row("역할", str(s.get("tactic_role", ""))),
             _info_row("위치", str(s.get("position", ""))),
@@ -194,34 +202,115 @@ def create_student_view(service: StudentService) -> ft.Control:
         }
 
         # 영문 게임 태그 → 한국어 번역
+        # <b:Tag>=버프 표기, <d:Tag>=디버프 표기. 같은 스탯이라도 두 프리픽스에
+        # 모두 등장하므로 하나의 딕셔너리에서 같이 조회한다.
         _STAT_TAG_KR = {
-            "CriticalDamage":      "치명 대미지",
-            "CriticalChance":      "치명률",
-            "CriticalPoint":       "치명률",
-            "DamagedRatio":        "받는 피해량",
-            "AttackPower":         "공격력",
-            "MaxHP":               "최대 체력",
-            "DefensePower":        "방어력",
-            "HealPower":           "치유력",
-            "BlockRate":           "방어 관통",
-            "Evasion":             "회피",
-            "StabilityPoint":      "안정감",
-            "AttackSpeed":         "공격 속도",
-            "NormalAttackSpeed":   "기본 공격 속도",
-            "Range":               "사거리",
-            "Speed":               "이동 속도",
-            "AmmoCount":           "탄약 수",
-            "AccumulationDamage":  "누적 대미지",
-            "CostChange":          "코스트",
-            "EnhanceSonicRate":    "강화 비율",
-            "DefensePenetration":  "방어 무시",
-            "ReloadTime":          "재장전 시간",
-            "SkillDamage":         "스킬 대미지",
+            "CriticalDamage":          "치명 대미지",
+            "CriticalChance":          "치명률",
+            "CriticalChanceResistPoint": "치명률 저항",
+            "CriticalDamageRateResist": "치명 대미지 저항",
+            "CriticalPoint":           "치명률",
+            "DamagedRatio":            "받는 피해량",
+            "DamageRatio":             "대미지",
+            "AttackPower":             "공격력",
+            "ATK":                     "공격력",
+            "MaxHP":                   "최대 체력",
+            "MAXHP":                   "최대 체력",
+            "DefensePower":            "방어력",
+            "DEF":                     "방어력",
+            "HealPower":               "치유력",
+            "HealEffectiveness":       "치유 효과",
+            "DotHeal":                 "지속 회복",
+            "BlockRate":               "방어 관통",
+            "Evasion":                 "회피",
+            "Dodge":                   "회피",
+            "StabilityPoint":          "안정감",
+            "Stability":               "안정성",
+            "HIT":                     "명중",
+            "AttackSpeed":             "공격 속도",
+            "NormalAttackSpeed":       "기본 공격 속도",
+            "Range":                   "사거리",
+            "Speed":                   "이동 속도",
+            "MoveSpeed":               "이동 속도",
+            "AmmoCount":               "탄약 수",
+            "AccumulationDamage":      "누적 대미지",
+            "CostChange":              "코스트",
+            "CostOverload":            "코스트 초과 충전",
+            "CostRegen":               "코스트 회복",
+            "EnhanceSonicRate":        "강화 비율",
+            "EnhanceBasicsDamageRate": "기본 공격 강화 비율",
+            "EnhanceExDamageRate":     "EX 스킬 강화 비율",
+            "EnhanceExplosionRate":    "폭발 강화 비율",
+            "EnhanceMysticRate":       "신비 강화 비율",
+            "EnhancePierceRate":       "관통 강화 비율",
+            "ExtendDebuffDuration":    "디버프 지속시간 연장",
+            "DefensePenetration":      "방어 무시",
+            "Penetration":             "관통력",
+            "ReloadTime":              "재장전 시간",
+            "SkillDamage":             "스킬 대미지",
+            "Shield":                  "보호막",
+            "TacticalShield":          "전술 보호막",
+            "OppressionPower":         "압제력",
+            "OppressionResist":        "압제 저항",
+            "ReduceWeakDamagedRate":   "약점 피해 감소",
+            "ConcentratedTarget":      "집중 타겟",
+            "AidAttitude":             "원호 태세",
+            "NinjaWalking":            "은신",
+            "Cheerleading":            "응원",
+            "Chill":                   "냉기",
+            "ChillDamagedIncrease":    "냉기 피해 증가",
+            "ElectricShock":           "감전",
+            "Poison":                  "중독",
+            "Burn":                    "화상",
+            "DamageByHit_Damaged":     "피격 시 대미지",
         }
+
+        # <s:Tag> = 특정 상태/버프 이름 (CHxxxx_* 형태는 다른 캐릭터 스킬을
+        # 가리키는 내부 참조라 일반화된 번역이 불가능 → 태그만 제거)
+        _STATUS_TAG_KR = {
+            "Fury":             "분노",
+            "FormChange":       "형태 변경",
+            "Immortal":         "무적",
+            "Holiday":          "홀리데이",
+            "Pray":             "기원",
+            "Stamp":            "도장",
+            "Dado":             "다도",
+            "LittleDevil":      "리틀 데빌",
+            "Misdeed":          "악행",
+            "OldBook":          "오래된 책",
+            "Omamori":          "오마모리",
+            "SilverBullet":     "은빛 총알",
+            "EnergyBatteryHalf": "에너지 배터리",
+            "Accumulation":     "축적",
+        }
+
+        # <c:Tag> = 군중제어(CC) 효과 이름
+        _CC_TAG_KR = {
+            "Confusion": "혼란",
+            "Fear":      "공포",
+            "Provoke":   "도발",
+            "Stunned":   "스턴",
+        }
+
+        def _translate_tag(prefix: str, name: str) -> str:
+            """프리픽스별 태그 → 한국어 (매칭 안 되면 원문 유지)"""
+            # <Tag='리터럴 텍스트'> 형태는 이미 한국어 텍스트가 박혀 있으므로 그대로 사용
+            if "='" in name:
+                literal = name.split("='", 1)[1].rstrip("'")
+                return literal
+            if prefix in ("b", "d"):
+                return _STAT_TAG_KR.get(name, name)
+            if prefix == "s":
+                return _STATUS_TAG_KR.get(name, "")  # 미등록 CHxxxx_* 참조는 제거
+            if prefix == "c":
+                return _CC_TAG_KR.get(name, name)
+            if prefix == "kb":
+                return name  # 넉백 칸 수는 숫자 그대로 표시
+            return name
 
         def _resolve_params(desc: str, params_json: str | None) -> str:
             """영문 태그 번역 + <?N> 수치 치환
-            순서: ①<?N> 치환 → ②<b:Tag> 번역 → ③나머지 태그 제거
+            순서: ①<?N> 치환 → ②<prefix:Tag> 번역 → ③나머지 태그 제거
             <?N>을 먼저 치환해야 <[^>]+> 정리 시 사라지지 않음
             """
             if not desc:
@@ -234,13 +323,13 @@ def create_student_view(service: StudentService) -> ft.Control:
                         desc = desc.replace(f"<?{i + 1}>", str(val))
                 except Exception:
                     pass
-            # ② <b:TagName> → 한국어
+            # ② <prefix:TagName> → 한국어 (b/d=스탯, s=상태, c=군중제어, kb=넉백)
             desc = _re.sub(
-                r"<b:([^>]+)>",
-                lambda m: _STAT_TAG_KR.get(m.group(1), m.group(1)),
+                r"<([a-zA-Z]+):([^>]+)>",
+                lambda m: _translate_tag(m.group(1), m.group(2)),
                 desc,
             )
-            # ③ 나머지 <...> 태그 제거
+            # ③ 남아있는 미해석 태그 제거
             desc = _re.sub(r"<[^>]+>", "", desc)
             return desc
 
