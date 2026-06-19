@@ -1,14 +1,8 @@
-# macOS
 .DS_Store
-
+.claude
 *.txt
-*.pdf
 *.hwp
-
+.venv
 *.env
-
-*.png
-
 __pycache__
-
 *.db
